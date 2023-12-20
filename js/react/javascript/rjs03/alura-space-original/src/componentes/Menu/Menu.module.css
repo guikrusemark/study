@@ -1,0 +1,34 @@
+.menu {
+  width: 18%;
+}
+.menu__lista {
+  padding-left: 0.5rem;
+  margin: 0;
+  height: 276px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.menu__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu__item:first-child a {
+  font-weight: 700;
+  color: #7b78e5;
+  font-family: "GandhiSansRegular";
+}
+.menu img {
+  margin-right: 0.5rem;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: #d9d9d9;
+  font-family: "GandhiSansRegular";
+}/*# sourceMappingURL=Menu.module.css.map */

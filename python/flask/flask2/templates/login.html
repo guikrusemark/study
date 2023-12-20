@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jogoteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  </head>
+  <body>
+    <div class="container">
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <h1>Faça seu login</h1>
+        <form method="POST" action="{{ url_for('autenticar') }}">
+            <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+            {{ form.csrf_token() }}
+            <div class="form-group">
+                {{ form.nickname.label(class="form-label") }}
+                {{ form.nickname(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.senha.label(class="form-label") }}
+                {{ form.senha(class="form-control") }}
+            </div>
+            <div class="form-group buttons">
+                {{ form.login(class="btn btn-primary") }}
+                <a class="btn btn-danger" href="{{ url_for('index') }}">Voltar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

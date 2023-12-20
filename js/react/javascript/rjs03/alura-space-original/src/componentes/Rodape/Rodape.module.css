@@ -1,0 +1,24 @@
+.rodape {
+  background-color: #04244f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0px -2px 30px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+.rodape__icones {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.rodape p {
+  margin: 0;
+  color: #d9d9d9;
+  font-family: "GandhiSansRegular";
+}/*# sourceMappingURL=Rodape.module.css.map */

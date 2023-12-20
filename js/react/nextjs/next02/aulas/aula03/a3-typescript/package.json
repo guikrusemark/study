@@ -1,0 +1,27 @@
+{
+  "name": "a3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "export": "next build && next export -o export-static/",
+    "start:static": "npx http-server ./export-static/ -c-1 -p=3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@skynexui/components": "^1.24.3",
+    "next": "^12.0.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@types/react": "^17.0.38",
+    "typescript": "^4.5.5"
+  }
+}

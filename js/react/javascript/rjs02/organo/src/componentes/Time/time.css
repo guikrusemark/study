@@ -1,0 +1,26 @@
+.time {
+    text-align: center;
+    padding: 32px;
+    background: url('../../../public/imagens/fundo.png');
+    background-blend-mode: multiply;
+}
+
+.time .cor {
+    position: relative;
+    float: right;
+}
+
+.time h3 {
+    font-size: 32px;
+    font-family: 'Prata';
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.time .colaboradores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}

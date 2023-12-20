@@ -1,0 +1,17 @@
+.button-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-form button {
+    padding: 15px;
+    background-color: #fff;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}

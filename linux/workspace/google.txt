@@ -1,0 +1,197 @@
+Google
+From Wikipedia, the free encyclopedia
+This article is about the company. For the search engine, see Google Search. For other uses, see Google (disambiguation).
+"Google Inc." redirects here. For the parent company, see Alphabet Inc..
+Not to be confused with Goggle or Googol.
+Google Inc.
+Google 2015 logo.svg
+Type
+Subsidiary
+Industry	
+Internet
+Computer software
+Founded	September 4, 1998; 17 years ago
+Menlo Park, California[1][2]
+Founders	
+Larry Page
+Sergey Brin
+Headquarters	Googleplex, Mountain View, California, U.S.[3]
+Coordinates	37.422°N 122.084058°WCoordinates: 37.422°N 122.084058°W
+Area served
+Worldwide
+Key people
+Sundar Pichai (CEO)
+Products	List of Google products
+Parent	Independent (1998–2015)
+Alphabet Inc. (2015–present)
+Subsidiaries	List of subsidiaries
+Website	www.google.com
+Footnotes / references
+[4]
+Google Inc. is an American multinational technology company specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, and software.[5] Most of its profits are derived from AdWords,[6][7] an online advertising service that places advertising near the list of search results.
+
+Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University. Together they own about 14 percent of its shares but control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. An initial public offering followed on August 19, 2004. Its mission statement from the outset was "to organize the world's information and make it universally accessible and useful,"[8] and its unofficial slogan was "Don't be evil".[9][10] In 2004, Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.[11] In August 2015, Google announced plans to reorganize its interests as a holding company called Alphabet Inc. When this restructuring took place on October 2, 2015, Google became Alphabet's leading subsidiary, as well as the parent for Google's Internet interests.[12][13][14][15][16]
+
+Rapid growth since incorporation has triggered a chain of products, acquisitions and partnerships beyond Google's core search engine (Google Search). It offers online productivity software (Google Docs) including email (Gmail), a cloud storage service (Google Drive), an office suite (Google Docs) and a social networking service (Google+). Desktop products include applications for web browsing (Google Chrome), organizing and editing photos (Google Photos), and instant messaging (Hangouts). The company leads the development of the Android mobile operating system and the browser-only Chrome OS[17] for a class of netbooks known as Chromebooks. Google has moved increasingly into communications hardware: it partners with major electronics manufacturers[18] in the production of its "high-quality low-cost"[19] Nexus devices.[20] In 2012, a fiber-optic infrastructure was installed in Kansas City to facilitate a Google Fiber broadband service.[21]
+
+The corporation has been estimated to run more than one million servers in data centers around the world (as of 2007).[22] It processes over one billion search requests[23] and about 24 petabytes of user-generated data each day (as of 2009).[24][25][26][27] In December 2013, Alexa listed google.com as the most visited website in the world. Numerous Google sites in other languages figure in the top one hundred, as do several other Google-owned sites such as YouTube and Blogger.[28] Its market dominance has led to prominent media coverage, including criticism of the company over issues such as aggressive tax avoidance,[29] search neutrality, copyright, censorship, and privacy.[30][31]
+
+Contents  [hide] 
+1	History
+1.1	Financing, 1998 and initial public offering, 2004
+1.2	Growth
+1.3	2013 onward
+1.4	Acquisitions and partnerships
+1.5	Google data centers
+1.6	Alphabet
+2	Products and services
+2.1	Advertising
+2.2	Search engine
+2.3	Productivity tools
+2.4	Enterprise products
+2.5	Other products
+2.6	APIs
+2.7	Other websites
+3	Corporate affairs and culture
+3.1	Employees
+3.2	Office locations and headquarters
+3.3	Doodles
+3.4	Easter eggs and April Fools' Day jokes
+3.5	atGoogleTalks
+3.6	Philanthropy
+3.7	Tax avoidance
+3.8	Environment
+3.9	Lobbying
+3.10	Litigation
+4	Criticism and controversy
+5	See also
+6	References
+7	Further reading
+8	External links
+History
+Main article: History of Google
+Google's homepage in 1998
+Google's original homepage had a simple design because the company founders were not experienced in HTML, the markup language used for designing web pages.[32]
+Google began in January 1996 as a research project by Larry Page and Sergey Brin when they were both PhD students at Stanford University in Stanford, California.[33]
+
+While conventional search engines ranked results by counting how many times the search terms appeared on the page, the two theorized about a better system that analyzed the relationships between websites.[34] They called this new technology PageRank; it determined a website's relevance by the number of pages, and the importance of those pages, that linked back to the original site.[35][36]
+
+Page and Brin originally nicknamed their new search engine "BackRub", because the system checked backlinks to estimate the importance of a site.[37][38][39] Eventually, they changed the name to Google, originating from a misspelling of the word "googol",[40][41] the number one followed by one hundred zeros, which was picked to signify that the search engine was intended to provide large quantities of information.[42] Originally, Google ran under Stanford University's website, with the domains google.stanford.edu and z.stanford.edu.[43][44]
+
+The domain name for Google was registered on September 15, 1997,[45] and the company was incorporated on September 4, 1998. It was based in the garage of a friend (Susan Wojcicki[33]) in Menlo Park, California. Craig Silverstein, a fellow PhD student at Stanford, was hired as the first employee.[33][46][47]
+
+In May 2011, the number of monthly unique visitors to Google surpassed one billion for the first time, an 8.4 percent increase from May 2010 (931 million).[48] In January 2013, Google announced it had earned US$50 billion in annual revenue for the year of 2012. This marked the first time the company had reached this feat, topping their 2011 total of $38 billion.[49]
+
+The company has reported fourth quarter (Dec 2014) Earnings Per Share (EPS) of $6.88 – $0.20 under projections. Revenue came in at $14.5 billion (16.9% growth year over year), also under expectations by $110 million.[50]
+
+Financing, 1998 and initial public offering, 2004
+Google's first servers, showing lots of exposed wiring and circuit boards
+Google's first production server. Google's production servers continue to be built with inexpensive hardware.[51]
+The first funding for Google was an August 1998 contribution of $100,000 from Andy Bechtolsheim, co-founder of Sun Microsystems, given before Google was incorporated.[52] Early in 1999, while graduate students, Brin and Page decided that the search engine they had developed was taking up too much time and distracting their academic pursuits. They went to Excite CEO George Bell and offered to sell it to him for $1 million. He rejected the offer and later criticized Vinod Khosla, one of Excite's venture capitalists, after he negotiated Brin and Page down to $750,000. On June 7, 1999, a $25 million round of funding was announced,[53] with major investors including the venture capital firms Kleiner Perkins Caufield & Byers and Sequoia Capital.[52]
+
+Google's initial public offering (IPO) took place five years later on August 19, 2004. At that time Larry Page, Sergey Brin, and Eric Schmidt agreed to work together at Google for 20 years, until the year 2024.[54] The company offered 19,605,052 shares at a price of $85 per share.[55][56] Shares were sold in an online auction format using a system built by Morgan Stanley and Credit Suisse, underwriters for the deal.[57][58] The sale of $1.67 bn (billion) gave Google a market capitalization of more than $23bn.[59] By January 2014, its market capitalization had grown to $397bn.[60] The vast majority of the 271 million shares remained under the control of Google, and many Google employees became instant paper millionaires. Yahoo!, a competitor of Google, also benefited because it owned 8.4 million shares of Google before the IPO took place.[61]
+
+There were concerns that Google's IPO would lead to changes in company culture. Reasons ranged from shareholder pressure for employee benefit reductions to the fact that many company executives would become instant paper millionaires.[62] As a reply to this concern, co-founders Sergey Brin and Larry Page promised in a report to potential investors that the IPO would not change the company's culture.[63] In 2005, articles in The New York Times and other sources began suggesting that Google had lost its anti-corporate, no evil philosophy.[64][65][66][67][too many citations] In an effort to maintain the company's unique culture, Google designated a Chief Culture Officer, who also serves as the Director of Human Resources. The purpose of the Chief Culture Officer is to develop and maintain the culture and work on ways to keep true to the core values that the company was founded on: a flat organization with a collaborative environment.[68] Google has also faced allegations of sexism and ageism from former employees.[69][70] In 2013, a class action against several Silicon Valley companies, including Google, was filed for alleged "no cold call" agreements which restrained the recruitment of high-tech employees.[71]
+
+The stock performed well after the IPO, with shares hitting $350 for the first time on October 31, 2007,[72] primarily because of strong sales and earnings in the online advertising market.[73] The surge in stock price was fueled mainly by individual investors, as opposed to large institutional investors and mutual funds.[73] GOOG shares split into GOOG Class C shares and GOOGL class A shares.[74] The company is listed on the NASDAQ stock exchange under the ticker symbols GOOGL and GOOG, and on the Frankfurt Stock Exchange under the ticker symbol GGQ1. These ticker symbols now refer to Alphabet Inc., Google's holding company, since the fourth quarter of 2015.[75]
+
+Growth
+In March 1999, the company moved its offices to Palo Alto, California, which is home to several prominent Silicon Valley technology start-ups.[76] The next year, against Page and Brin's initial opposition toward an advertising-funded search engine,[77] Google began selling advertisements associated with search keywords.[33] In order to maintain an uncluttered page design and increase speed, advertisements were solely text-based. Keywords were sold based on a combination of price bids and click-throughs, with bidding starting at five cents per click.[33]
+
+This model of selling keyword advertising was first pioneered by Goto.com, an Idealab spin-off created by Bill Gross.[78][79] When the company changed names to Overture Services, it sued Google over alleged infringements of the company's pay-per-click and bidding patents. Overture Services would later be bought by Yahoo! and renamed Yahoo! Search Marketing. The case was then settled out of court; Google agreed to issue shares of common stock to Yahoo! in exchange for a perpetual license.[80]
+
+In 2001, Google received a patent for its PageRank mechanism.[81] The patent was officially assigned to Stanford University and lists Lawrence Page as the inventor. In 2003, after outgrowing two other locations, the company leased an office complex from Silicon Graphics at 1600 Amphitheatre Parkway in Mountain View, California.[82] The complex became known as the Googleplex, a play on the word googolplex, the number one followed by a googol zeroes. The Googleplex interiors were designed by Clive Wilkinson Architects. Three years later, Google bought the property from SGI for $319 million.[83] By that time, the name "Google" had found its way into everyday language, causing the verb "google" to be added to the Merriam-Webster Collegiate Dictionary and the Oxford English Dictionary, denoted as "to use the Google search engine to obtain information on the Internet".[84][85]
+
+The immense popularity of the search engine has led its fans calling themselves 'Googlists' as they follow 'Googlism', the new religion.[86] Devotees of Google have found a non-profit online organization The Church of Google, a website where they worship the search engine giant.[87] The New York Times had discussed the topic "Is Google God?" under its 'opinion' category.[88] On the Internet, there are many blogs that even mention the reasons why Google is God.[89]
+
+
+Screenshot of the Google homepage in 2015
+2013 onward
+Google announced the launch of a new company called Calico on September 19, 2013, which will be led by Apple chairman Arthur Levinson. In the official public statement, Page explained that the "health and well-being" company will focus on "the challenge of ageing and associated diseases".[90]
+
+As of September 2013, Google operates 70 offices in more than 40 countries.[91] Google celebrated its 15-year anniversary on September 27, 2013, although it has used other dates for its official birthday.[92] The reason for the choice of September 27 remains unclear, and a dispute with rival search engine Yahoo! Search in 2005 has been suggested as the cause.[93][94]
+
+The Alliance for Affordable Internet (A4AI) was launched in October 2013 and Google is part of the coalition of public and private organisations that also includes Facebook, Intel and Microsoft. Led by Sir Tim Berners-Lee, the A4AI seeks to make Internet access more affordable so that access is broadened in the developing world, where only 31% of people are online. Google will help to decrease Internet access prices so that they fall below the UN Broadband Commission's worldwide target of 5% of monthly income.[95]
+
+The corporation's consolidated revenue for the third quarter of 2013 is reported in mid-October 2013 as $14.89 billion, a 12 percent increase compared to the previous quarter. Google's Internet business was responsible for $10.8 billion of this total, with an increase in the number of users' clicks on advertisements.[96]
+
+In November 2013, Google announced plans for a new 1-million-sq-ft (93,000 sq m) office in London, which is due to open in 2016. The new premises will be able to accommodate 4,500 employees and has been identified as one of the biggest ever commercial property acquisitions in Britain.[97]
+
+In October 2014, according to the Interbrand ranking, Google was the second most valuable brand in the world (behind Apple) with a valuation of $107.4 billion.[98] A Millward Brown report from the same year puts the Google brand ahead of Apple's at #1.[99]
+
+Acquisitions and partnerships
+See also: List of mergers and acquisitions by Google
+
+Larry Page and Sergey Brin in 2003
+Since 2001, Google has acquired many companies, primarily small venture capital-funded firms. In 2004, Google acquired Keyhole, Inc.[100] The start-up company developed a product called Earth Viewer that gave a three-dimensional view of the Earth. Google renamed the service to Google Earth in 2005. Google acquired Urchin Software in April 2005, using their 'Urchin on Demand' product (along with ideas from Adaptive Path's 'Measure Map') to create Google Analytics in 2006.
+
+In October 2006, Google announced that it had acquired the video-sharing site YouTube for $1.65 billion in Google stock, and the deal was finalized on November 13, 2006.[101] Google does not provide detailed figures for YouTube's running costs, and YouTube's revenues in 2007 were noted as "not material" in a regulatory filing.[102] In June 2008, a Forbes magazine article projected the 2008 YouTube revenue at $200 million, noting progress in advertising sales.[103]
+
+On April 13, 2007, Google reached an agreement to acquire DoubleClick for $3.1 billion, giving Google valuable relationships that DoubleClick had with Web publishers and advertising agencies.[104] Later that same year, Google purchased GrandCentral for $50 million.[105] The site would later be changed over to Google Voice. On August 5, 2009, Google bought out its first public company, purchasing video software maker On2 Technologies for $106.5 million.[106] Google also acquired Aardvark, a social network search engine, for $50 million, and commented on its internal blog, "we're looking forward to collaborating to see where we can take it".[107] In April 2010, Google announced it had acquired a hardware startup, Agnilux.[108]
+
+In addition to the many companies Google has purchased, the company has partnered with other organizations for research, advertising, and other activities. In 2005, Google partnered with NASA Ames Research Center to build 1,000,000 square feet (93,000 m2) of offices.[109] The offices would be used for research projects involving large-scale data management, nanotechnology, distributed computing, and the entrepreneurial space industry. Google entered into a partnership with Sun Microsystems in October 2005 to help share and distribute each other's technologies.[110]
+
+The company also partnered with AOL[111] to enhance each other's video search services. Google's 2005 partnerships also included financing the new .mobi top-level domain for mobile devices, along with other companies including Microsoft, Nokia, and Ericsson.[112] Google would later launch "AdSense for Mobile", taking advantage of the emerging mobile advertising market.[113] Increasing its advertising reach even further, Google and Fox Interactive Media of News Corporation entered into a $900 million agreement to provide search and advertising on the then-popular social networking site MySpace.[114]
+
+In 2007, Google began sponsoring NORAD Tracks Santa, displacing former sponsor AOL. NORAD Tracks Santa purports to follow Santa Claus' progress on Christmas Eve,[115] using Google Earth to "track Santa" in 3-D for the first time.[116] Google-owned YouTube gave NORAD Tracks Santa its own channel.[117]
+
+In 2008, Google developed a partnership with GeoEye to launch a satellite providing Google with high-resolution (0.41 m monochrome, 1.65 m color) imagery for Google Earth. The satellite was launched from Vandenberg Air Force Base on September 6, 2008.[118] Google also announced in 2008 that it was hosting an archive of Life Magazine's photographs. Some images in the archive were never published in the magazine.[119] The photos were watermarked and originally had copyright notices posted on all photos, regardless of public domain status.[120]
+
+In 2010, Google Energy made its first investment in a renewable energy project, putting $38.8 million into two wind farms in North Dakota. The company announced the two locations will generate 169.5 megawatts of power, enough to supply 55,000 homes. The farms, which were developed by NextEra Energy Resources, will reduce fossil fuel use in the region and return profits. NextEra Energy Resources sold Google a twenty-percent stake in the project to get funding for its development.[121] In February 2010, the Federal Energy Regulatory Commission FERC granted Google an authorization to buy and sell energy at market rates.[122] The order specifically states that Google Energy—a subsidiary of Google—holds the rights "for the sale of energy, capacity, and ancillary services at market-based rates", but acknowledges that neither Google Energy nor its affiliates "own or control any generation or transmission" facilities.[123] The corporation exercised this authorization in September 2013 when it announced that it will purchase all the electricity produced by the not-yet-built 240-megawatt Happy Hereford wind farm.[124]
+
+Also in 2010, Google purchased Global IP Solutions, a Norway-based company that provides web-based teleconferencing and other related services. This acquisition enabled Google to add telephone-style services to its list of products.[125] On May 27, 2010, Google announced it had also closed the acquisition of the mobile ad network AdMob. This occurred days after the Federal Trade Commission closed its investigation into the purchase.[126] Google acquired the company for an undisclosed amount.[127] In July 2010, Google signed an agreement with an Iowa wind farm to buy 114 megawatts of energy for 20 years.[128]
+
+On April 4, 2011, The Globe and Mail reported that Google bid $900 million for six thousand Nortel Networks patents.[129]
+
+On August 15, 2011, Google made its largest-ever acquisition to-date when it announced that it would acquire Motorola Mobility for $12.5 billion[130][131] subject to approval from regulators in the United States and Europe. In a post on Google's blog, Google Chief Executive and co-founder Larry Page revealed that the acquisition was a strategic move to strengthen Google's patent portfolio. The company's Android operating system has come under fire in an industry-wide patent battle, as Apple and Microsoft have sued Android device makers such as HTC, Samsung, and Motorola.[132] The merger was completed on May 22, 2012, after the approval of People's Republic of China.[133]
+
+This purchase was made in part to help Google gain Motorola's considerable patent portfolio on mobile phones and wireless technologies to help protect it in its ongoing patent disputes with other companies,[134] mainly Apple and Microsoft,[132] and to allow it to continue to freely offer Android.[135] After the acquisition closed, Google began to restructure the Motorola business to fit Google's strategy. On August 13, 2012, Google announced plans to lay off 4000 Motorola Mobility employees.[136] On December 10, 2012, Google sold the manufacturing operations of Motorola Mobility to Flextronics for $75 million.[137] As a part of the agreement, Flextronics will manufacture undisclosed Android and other mobile devices.[138] On December 19, 2012, Google sold the Motorola Home business division of Motorola Mobility to Arris Group for $2.35 billion in a cash-and-stock transaction. As a part of this deal, Google acquired a 15.7% stake in Arris Group valued at $300 million.[139]
+
+On June 5, 2012, Google announced it acquired Quickoffice, a company widely known for their mobile productivity suite for both iOS and Android. Google plans to integrate Quickoffice's technology into its own product suite.[140]
+
+On February 6, 2013, Google announced it had acquired Channel Intelligence for $125 million. Channel Intelligence, a technology company that helps customers buy products online, is active globally in 31 different countries and works with over 850 retailers. Google will use this technology to enhance its e-commerce business.[141]
+
+The official confirmation of Google's acquisition of the Israel-based startup Waze occurred in June 2013. Waze is promoted as a "community-based traffic and navigation app".[142]
+
+Following the acquisition of Waze, Google submitted a "10-Q" filing with the Securities Exchange Commission (SEC) that revealed that the corporation spent $1.3 billion on acquisitions during the first half of 2013. The filing also revealed that the Waze acquisition cost Google $966 million, instead of the $1.1 billion figure that was initially presented in media sources.[142][143][144]
+
+The 2012 acquisition of WIMM Labs, a company that previously made an Android-powered smartwatch, was confirmed in August 2013. As of August 31, 2013, Google has not publicly commented on the news concerning WIMM Labs.[145] The acquisition of Flutter, a creator of hand gesture recognition technology, was confirmed by the corporation in early October 2013. The reported price is $40 million and Google spokesperson stated: "We're really impressed by the Flutter team's ability to design new technology based on cutting-edge research." Flutter's technology allows users to enact hand gestures to control navigation for apps such as iTunes, Windows Media Player, and Winamp.[146]
+
+On January 26, 2014, Google Inc. announced it had agreed to acquire DeepMind Technologies, a privately held artificial intelligence company from London. DeepMind describes itself as having the ability to combine the best techniques from machine learning and systems neuroscience to build general-purpose learning algorithms. DeepMind's first commercial applications were used in simulations, e-commerce and games. As of December 2013, it was reported that DeepMind had roughly 75 employees.[147] The technology news website Re/code reported that the company was purchased for $400 million though it was not disclosed where the information came from. A Google spokesman would not comment of the price.[148][149] The purchase of DeepMind aids in Google's recent growth in the artificial intelligence and robotics community.[150]
+
+On January 29, 2014, Google announced it was selling its Motorola Mobility unit to China-based Lenovo, for $2.91bn. The company kept the extensive patent collection used to develop Android products, considered the most valuable part of the original deal.[151] Nonetheless, the sale price was significantly less than the $12.5 billion Google had bought Motorola Mobility for. The $2.91bn price tag consisted of $660 million in cash, $750 million in Lenovo ordinary shares, and a $1.5 billion 3-year promissory note.[152]
+
+In March 2014, Google confirmed it had purchased the remnants of gaming startup, Green Throttle Games, which developed a Bluetooth gaming controller for Android.[153]
+
+In May 2014, Google announced it had purchased Quest Visual, maker of the augmented reality translator app Word Lens.[154]
+
+In June 2014, Google purchased satellite imaging firm Skybox Imaging for $500 million.[155]
+
+In July 2014, Google purchased the online music service Songza.[156]
+
+On September 10, 2015, Google announced to form strategic partnership with Mobvoi to bring Android Wear to mainland China.[157]
+
+In October 2015, Google invested in a China-based artificial intelligence (AI) company, Mobvoi. The funding will enable the Company to further enhance its core AI technologies, and develop new consumer products empowered by AI.[158]
+
+Google data centers
+As of 2014, Google Inc. owned and operated six Google Modular Data Centers across the U.S., one in Chile, one in Finland, one in Ireland, one in Belgium, one in Singapore and one on Taiwan.[159] In 2011, the company had announced plans to build three data centers at a cost of more than $200 million in Asia (Singapore, Hong Kong and Taiwan) and said they would be operational within two years.[160][161] In December 2013, Google announced that it had scrapped the plan to build a data center in Hong Kong.[162]
+
+In October 2013, The Washington Post reported that the U.S. National Security Agency intercepted communications between Google's data centers, as part of a program named MUSCULAR.[163][164] This wiretapping was made possible because Google did not encrypt data passed inside its own network.[165] Google began encrypting data sent between data centers in 2013.[166]
+
+Alphabet
+On August 10, 2015, Google announced plans to reorganize its various interests as a holding company, Alphabet Inc., with Google as its leading subsidiary. Google will continue to be the umbrella company for Alphabet's Internet interests. Upon completion of the restructure, Sundar Pichai became CEO of Google.[167][168]
+
+Products and services
+See also: List of Google products
+Advertising
+
+Google on ad-tech London, 2010
+For the 2006 fiscal year, the company reported $10.492 billion in total advertising revenues and only $112 million in licensing and other revenues.[169] In 2011, 96% of Google's revenue was derived from its advertising programs.[170] In addition to its own algorithms for understanding search requests, Google uses technology from the company DoubleClick, to project user interest and target advertising to the search context and the user history.[171][172]
+
+Google Analytics allows website owners to track where and how people use their website, for example by examining click rates for all the links on a page.[173] Google advertisements can be placed on third-party websites in a two-part program. Google's AdWords allows advertisers to display their advertisements in the Google content network, through either a cost-per-click or cost-per-view scheme. The sister service, Google AdSense, allows website owners to display these advertisements on their website and earn money every time ads are clicked.[174]
+
+One of the criticisms of this program is the possibility of click fraud, which occurs when a person or automated script clicks on advertisements without being interested in the product, causing the advertiser to pay money to Google unduly. Industry reports in 2006 claimed that approximately 14 to 20 percent of clicks were fraudulent or invalid.[175]
+
+In February 2003, Google stopped showing the advertisements of Oceana, a non-profit organization protesting a major cruise ship's sewage treatment practices. Google cited its editorial policy at the time, stating "Google does not accept advertising if the ad or site advocates against other individuals, groups, or organizations."[176] The policy was later changed.[177] In June 2008, Google reached an advertising agreement with Yahoo!, which would have allowed Yahoo! to feature Google advertisements on its web pages. The alliance between the two companies was never completely realized because of antitrust concerns by the U.S. Department of Justice. As a result, Google pulled out of the deal in November 2008.[178][179]
+
+In an attempt to advertise its own products, Google launched a website called Demo Slam, developed to demonstrate technology demos of Google Products.[180]

@@ -1,0 +1,12 @@
+ssh		22/tcp				# SSH Remote Login Protocol
+# Updated from https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml .
+https		443/tcp				# http protocol over TLS/SSL
+https		443/udp				# HTTP/3
+# Updated from https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml .
+http		80/tcp		www		# WorldWideWeb HTTP
+https		443/tcp				# http protocol over TLS/SSL
+https		443/udp				# HTTP/3
+http-alt	8080/tcp	webcache	# WWW caching service
+telnet		23/tcp
+telnets		992/tcp				# Telnet over SSL
+tfido		60177/tcp			# fidonet EMSI over telnet

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS1</title>
+
+</head>
+
+<body>
+
+    <h1>JS1</h1>
+
+    <input />
+    <button>Multiplicar por 3</button>
+
+    <script>
+        function multiplicar() {
+            let input = document.querySelector('input');
+            let valor = input.value;
+            let resultado = valor * 3;
+            document.querySelector('input').value = resultado;
+        }
+        document.querySelector('button').addEventListener('click', multiplicar);
+
+        var ano = 2022;
+        function pulaLinhas(numLinhas) {
+            for (var i = 0; i < numLinhas; i++) {
+                document.write("<br>");
+            }
+            return numLinhas;
+        }
+
+        document.write("<h2>Olá Mundo!" + "</h2>");
+        document.write(pulaLinhas(Math.round(Math.random() * 10)));
+        document.write("<h2>Olá Mundo!" + "</h2>" + Math.random());
+
+        //document.querySelector('input').focus();
+        document.querySelector('input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                document.querySelector('button').click();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

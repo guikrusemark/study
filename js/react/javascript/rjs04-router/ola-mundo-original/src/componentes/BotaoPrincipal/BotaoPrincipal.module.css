@@ -1,0 +1,22 @@
+ .botaoPrincipal {
+    display: inline-block;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    background-color: var(--azul-medio);
+    color: var(--branco);
+    border: 3px solid var(--azul-medio);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoPrincipal.lg {
+    padding: 1.5rem 2.75rem;
+    font-size: 1.5rem;
+    line-height: 1.125rem;
+}
+ 
+.botaoPrincipal:hover {
+    border: 3px solid var(--azul-escuro);
+}

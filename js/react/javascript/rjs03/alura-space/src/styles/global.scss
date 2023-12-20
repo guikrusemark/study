@@ -1,0 +1,38 @@
+@import-normalize;
+@import './variables';
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient($azul-escuro, $azul-claro);
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $azul-escuro;
+    border-radius: 20px;
+
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient($azul-escuro, $azul-claro);
+}
+
+@font-face {
+    font-family: $fonte-normal;
+    src: local($fonte-normal), url($fonte-normal-path) format($fonte-format);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $fonte-bold;
+    src: local($fonte-bold), url($fonte-bold-path) format($fonte-format);
+    font-weight: 700;
+    font-display: swap;
+}
