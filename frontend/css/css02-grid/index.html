@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveCast</title>
+    <link rel="shortcut icon" href="./src/imagens/Logos/Favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/grid-flex/index.css">
+    <link rel="stylesheet" href="./src/style/grid-flex/menu.css">
+    <link rel="stylesheet" href="./src/style/grid-flex/secao.css">
+    <link rel="stylesheet" href="./src/style/grid-flex/cartao.css">
+    <link rel="stylesheet" href="./src/style/grid-flex/navbar.css">
+    <link rel="stylesheet" href="./src/style/base.css">
+    <link rel="stylesheet" href="./src/style/responsivo.css">
+</head>
+
+<body>
+
+    <header class="cabecalho container">
+        <a href="#"><img class="cabecalho__logo" src="./src/imagens/Logos/CastWave_logo.svg" alt="Logo da WaveCast"></a>
+        <button class="cabecalho__botao"><img src="./src/imagens/Icones/seta-voltar.svg" alt="Seta voltar"></button>
+        <button class="cabecalho__botao cabecalho__botao__avancar"><img src="./src/imagens/Icones/seta-avancar.svg" alt="Seta avançar"></button>
+    </header>
+
+    <aside class="menu-lateral">
+        <a href="#" class="menu-lateral__logo"><img src="./src/imagens/Logos/CastWave_logo.svg" alt="Logo da CastWave"></a>
+        <nav>
+            <ul>
+                <li class="menu-lateral__link ativo"><button aria-label="Botão acessar home"><img src="./src/imagens/Icones/home_.svg" alt="Logo do Home">Home</button></li>
+                <li class="menu-lateral__link"><button aria-label="Botão acessar campo de busca"><img src="./src/imagens/Icones/search-branco.svg" alt="Logo do botão de busca">Busca</button></li>
+                <li class="menu-lateral__link"><button aria-label="Botão acessar sua biblioteca"><img src="./src/imagens/Icones/bookmark-branco.svg" alt="Logo do botão sua biblioteca">Sua Biblioteca</button></li>
+            </ul>
+        </nav>
+        <h3 class="menu-lateral__playlist">PLAYLISTS</h3>
+        <ul>
+            <li class="menu-lateral__link"><button aria-label="Botão criar playlist"><img src="./src/imagens/Icones/add-box-branco.svg" alt="Logo do botão criar playlist">Criar Playlist</button></li>
+            <li class="menu-lateral__link"><button aria-label="Botão podcasts salvos"><img src="./src/imagens/Icones/stars-branco.svg" alt="Logo do botão Podcasts salvos">Podcasts salvos</button></li>
+        </ul>
+    </aside>
+
+    <main class="principal container">
+        <section class="secao secao-horizontal">
+            <h2 class="secao__titulo">Tocados recentemente</h2>
+            <ul class="secao__cartoes">
+                    <li>
+                         <a class="cartao" href="#">
+                            <img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/hipsters-fora-de-controle.jpg" alt="Hipsters Fora de Contorle">
+                            <h3 class="cartao__titulo">Hipsters Fora de Controle</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cartao" href="#"><img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/layers-ponto-tech.jpg" alt="Layers Ponto Tech">
+                            <h3 class="cartao__titulo">Layers Ponto Tech</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cartao" href="#">
+                            <img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/scuba-ponto-dev.jpg" alt="Scuba Ponto Dev">
+                            <h3 class="cartao__titulo">Scuba Ponto Dev</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cartao" href="#">
+                            <img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/like-a-boss.jpg" alt="Like a Boss">
+                            <h3 class="cartao__titulo">Like a Boss</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cartao" href="#">
+                            <img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/carreira-sem-fronteiras.png" alt="Carreira sem fronteiras">
+                            <h3 class="cartao__titulo">Carreira sem fronteiras</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="cartao" href="#">
+                            <img class="cartao__imagem" src="./src/imagens/Imagens/Tocados recentemente/dev-sem-fronteiras.jpg" alt="Dev Sem Fronteiras">
+                            <h3 class="cartao__titulo">Dev sem Fronteiras</h3>
+                            <div class="cartao__player"></div>
+                            <form class="cartao__botao" action="."><button aria-label="Play Podcast"><img src="./src/imagens/Icones/botao-play.svg" alt="Ícone de Play"></button></form>
+                        </a>
+                    </li>
+            </ul>
+        </section>
+        <section class="secao secao-vertical">
+            <h2 class="secao__titulo">Hipsters Ponto Tech</h2>
+            <a class="secao__link" href="#" aria-label="Clique aqui para ver mais sobre Hipsters Ponto Tech">Ver mais</a>
+            <ul class="secao__cartoes">
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-techguide.png" alt="Hipsters Ponto Tech - TechGuide: Storytelling com dados">
+                        <h3 class="cartao__titulo">TechGuide: Storytelling com dados</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-estrategias.png" alt="Hipsters Ponto Tech - Estratégias de Testes e Dev Leaders">
+                        <h3 class="cartao__titulo">Estratégias de Testes e Dev Leaders</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-nvidia.png" alt="Hipsters Ponto Tech - NVDIA, IA, comunidade e Dev Leaders">
+                        <h3 class="cartao__titulo">NVIDIA, IA, comunidade e Dev Leaders</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-inovacao.png" alt="Hipsters Ponto Tech - Inovação no Cloud e Dev Leaders">
+                        <h3 class="cartao__titulo">Inovação no Cloud e Dev Leaders</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-ciberseguranca-1.png" alt="Hipsters Ponto Tech - Fundamnetos de Cibersegurança">
+                        <h3 class="cartao__titulo">Fundamentos de Cibersegurança</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/hipsters-ponto-tech/hipsters-ponto-tech-chatgpt.png" alt="Hipsters Ponto Tech - ChatGPT em todas as carreiras">
+                        <h3 class="cartao__titulo">ChatGPT em todas as carreiras</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="secao secao-vertical">
+            <h2 class="secao__titulo">Indicados para você</h2>
+            <a class="secao__link" href="#" aria-label="Clique aqui para ver mais sobre indicados para você">Ver mais</a>
+            <ul class="secao__cartoes">
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/case-farfetch.png" alt="Hipsters Ponto Tech - Case Farfetch: Front-End">
+                        <h3 class="cartao__titulo">Case Farfetch: Front-End</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/hipsters.png" alt="Hipsters Ponto Tech - Inteligência Artifical aplicada">
+                        <h3 class="cartao__titulo">Inteligência Artificial aplicada</h3>
+                        <h4 class="cartao__subtitulo">Hipsters Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/scuba-ponto-dev.png" alt="Scuba Ponto Dev - De secretária a programadora: Leticia Lima">
+                        <h3 class="cartao__titulo">De secretária a programadora: Leticia Lima</h3>
+                        <h4 class="cartao__subtitulo">Scuba Ponto Dev</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/ux-vs-ui.jpg" alt="Layers Ponto Tech - UX vs UI">
+                        <h3 class="cartao__titulo">UX vs UI</h3>
+                        <h4 class="cartao__subtitulo">Layers Ponto Tech</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/dev-sem-fronteiras.jpg" alt="Dev sem Fronteiras - DevRel">
+                        <h3 class="cartao__titulo">DevRel</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/indicados-pra-voce/atualizacoes-figma-2023.jpg" alt="Layers Ponto Tech - Atualizações Figma 2023">
+                        <h3 class="cartao__titulo">Atualizações Figma 2023</h3>
+                        <h4 class="cartao__subtitulo">Layers Ponto Tech</h4>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="secao secao-vertical">
+            <h2 class="secao__titulo">Dev sem Fronteiras</h2>
+            <a class="secao__link" href="#" aria-label="Clique aqui para ver mais sobre Dev sem Fronteiras">Ver mais</a>
+            <ul class="secao__cartoes">
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-100.jpg" alt="Dev sem Fronteiras - DevRei">
+                        <h3 class="cartao__titulo">DevRei</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-99.jpg" alt="Dev sem Fronteiras - Desenvolvedor Java em Granada">
+                        <h3 class="cartao__titulo">Desenvolvedor Java em Granada</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-96.jpg" alt="Dev sem Fronteiras - Engenheiro de Testes na Apple em Singapura">
+                        <h3 class="cartao__titulo">Engenheiro de Testes na Apple em Singapura</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-94.png" alt="Dev sem Fronteiras - Líder de QA na Cidade da Guatemala">
+                        <h3 class="cartao__titulo">Líder de QA na Cidade da Guatemala</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-92.png" alt="Dev sem Fronteiras - Gerente de Cloud na Cracóvia">
+                        <h3 class="cartao__titulo">Gerente de Cloud na Cracóvia</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+                <li class="secao__cartao cartao">
+                    <a href="#">
+                        <img class="cartao__imagem" src="./src/imagens/Imagens/dev-sem-fronteiras/dev-sem-fronteiras-90.png" alt="Dev sem Fronteiras - Engenheiro de Software em Tóquio, Japão">
+                        <h3 class="cartao__titulo">Engenheiro de Software em Tóquio, Japão</h3>
+                        <h4 class="cartao__subtitulo">Dev sem Fronteiras</h4>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div class="navbar">
+        <ul class="navbar__items">
+            <li class="navbar__item navbar__item--home"><form action="."><button aria-label="Botão acessar Home"><img src="./src/imagens/Icones/home-branco.svg" alt="Logo do botão acessar Home">Home</button></form></li>
+            <li class="navbar__item navbar__item--busca"><form action="."><button aria-label="Botão acessar campo de busca"><img src="./src/imagens/Icones/search-branco.svg" alt="Logo do botão acessar campo de busca">Busca</button></form></li>
+            <li class="navbar__item navbar__item--biblioteca"><form action="."><button aria-label="Botão acessar sua biblioteca"><img src="./src/imagens/Icones/bookmark-branco.svg" alt="Logo do botão acessar sua biblioteca">Sua Biblioteca</button></form></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
