@@ -1,0 +1,30 @@
+.team {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(50, 200, 90, 0.2);
+    min-height: 100px;
+}
+
+.team h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards .vazio {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #333;
+}

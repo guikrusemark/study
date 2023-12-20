@@ -1,0 +1,11 @@
+.footer {
+    background-color: #6277e8ff;
+    background-image: url('../../../public/images/fundo.png');
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

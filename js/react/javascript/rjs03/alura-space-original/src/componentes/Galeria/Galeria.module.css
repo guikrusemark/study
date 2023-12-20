@@ -1,0 +1,62 @@
+.galeria {
+  font-family: "GandhiSansRegular";
+  margin-bottom: 2rem;
+}
+.galeria h2 {
+  color: #7b78e5;
+  font-size: 24px;
+}
+.galeria__cards {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.galeria__card {
+  background-color: #041833;
+  border-radius: 20px;
+  height: 280px;
+  width: 285px;
+  margin-right: 1rem;
+  margin-bottom: 1.35rem;
+  cursor: pointer;
+}
+.galeria__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transform: scale(1.025);
+  transition: 0.18s;
+}
+.galeria__card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.galeria__card div p {
+  margin: 0;
+  margin-top: 0.5rem;
+  color: #9d9d9d;
+}
+.galeria__card div span {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.galeria__card div span img {
+  cursor: pointer;
+}
+.galeria__imagem {
+  height: 75%;
+  width: 100%;
+}
+.galeria__descricao {
+  margin: 0;
+  padding: 0 16px;
+  font-size: 1.25rem;
+  color: #d9d9d9;
+  font-family: "GandhiSansBold";
+}/*# sourceMappingURL=Galeria.module.css.map */

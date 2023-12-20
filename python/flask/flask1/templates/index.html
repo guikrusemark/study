@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    {% block view_game_table %}
+        <h1>{{ title }}</h1>
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in games %}
+                    <tr>
+                        <td>{{ loop.index0 + 1 }}</td>
+                        <td>{{ game.name }}</td>
+                        <td>{{ game.category }}</td>
+                        <td>{{ game.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endblock %}
+
+    <a class="btn btn-primary" href="{{ url_for('add_game') }}">
+        Adicionar Jogo
+    </a>
+    <a class="btn btn-primary" href="{{ url_for('remove_game') }}">
+        Remover Jogo
+    </a>
+{% endblock %}

@@ -1,0 +1,68 @@
+.colaborador {
+    width: 280px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.colaborador .cabecalho {
+    background-color:  #F0F0F0;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.colaborador .deleta {
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.colaborador .deleta:hover {
+    color: #d62727;
+}
+
+.colaborador img {
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+}
+
+.colaborador .rodape {
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+    height: 120px;
+}
+
+.colaborador .rodape h4 {
+    color: #6278F7;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.colaborador .rodape h5 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+    padding: 0 16px;
+}
+
+.colaborador .favorito {
+    position: relative;
+    float: left;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.colaborador .favorito:hover {
+    color: goldenrod;
+}
+
+.colaborador .favorito .favoritado {
+    color: goldenrod;
+}

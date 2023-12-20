@@ -1,0 +1,162 @@
+.banner {
+    background-image: url("../../img/banner-formulario.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.banner__titulo {
+    font-weight: 600;
+    color: var(--branco);
+    font-size: 32px;
+    line-height: 39px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 2em 5em;
+}
+
+.formulario {
+    margin: 3em auto;
+    width: 30vw;
+}
+
+.breadcrumb li {
+    display: inline;
+    font-size: 16px;
+    color: var(--azul-claro);
+}
+
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--azul-claro);
+    content: ">";
+}
+
+.breadcrumb__pagina {
+    font-weight: 700;
+}
+
+.formulario__container {
+    margin: 3em 0;
+    text-align: center;
+}
+
+.formulario__campo {
+    margin-bottom: 2em;
+}
+
+.formulario__titulo-texto {
+    margin: 1em 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.campo__etiqueta {
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.campo__escrita {
+    display: block;
+    border: 2px solid var(--azul-claro);
+    border-radius: 20px;
+    width: 100%;
+    padding: 1em;
+    margin-top: .5em;
+
+}
+
+.campo__escrita--menor {
+    width: 50%;
+}
+
+.termos__texto {
+    line-height: 20px;
+    display: inline;
+}
+
+.formulario__botao,
+.camera__botao {
+    background: var(--azul-claro);
+    margin: 2em auto;
+    display: block;
+    border: none;
+    padding: 1em 4em;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--branco);
+}
+
+.formulario__imagem {
+    display: block;
+    margin: 2em auto;
+}
+
+.formulario__imagem--invisivel {
+    display: none;
+}
+
+.formulario__botao--ancora {
+    text-decoration: none;
+    width: 50%;
+}
+
+.formulario__texto {
+    margin: 1em 8em;
+}
+
+.formulario__texto--negrito {
+    font-weight: 700;
+}
+
+.formulario__texto-secundario {
+    margin: 2em 6em;
+}
+
+.mensagem-erro {
+    color: red;
+}
+
+.campo__escrita--erro {
+    border: 2px solid red;
+}
+
+.formulario__mensagem,
+.formulario__camera {
+    display: none;
+}
+
+.formulario__mensagem--sucesso,
+.formulario__camera--exibir {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .formulario {
+        width: 70%;
+    }
+
+    .formulario__etapas {
+        width: 100%;
+    }
+
+    .formulario__texto {
+        margin: 0;
+    }
+
+    .container {
+        margin: 2em;
+    }
+}

@@ -1,0 +1,9 @@
+.banner {
+  background-color: #6278f7;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.banner img {
+  width: 100%;
+}

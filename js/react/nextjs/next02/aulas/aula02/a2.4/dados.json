@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "video": "https://www.youtube.com/embed/-6JwElEt49w",
+      "title": "Git e GitHub: Como subir meu primeiro projeto? Como versionar um projeto? #BaseDev #DevIniciante",
+      "content": "Você que ta dando seus primeiros passos como dev, chegou a hora de aprender a usar o GitHub pra guardar seus projetos! Nesse vídeo vamos juntos subir um projeto do ZERO, explicando passo a passo, lendo as mensagens pra você de hoje em diante usar pra sempre!",
+      "date": "21/01/2022"
+    },
+    {
+      "id": "2",
+      "video": "https://www.youtube.com/embed/aDKxJfJiM28",
+      "title": "CSS-in-JS na prática! Criando componentes com React e CSS no NextJS",
+      "content": "Você ai já ouviu falar de CSS in JS correto? E se eu ti disser que nesse vídeo você vai ver na prática as vantagens e vai inclusive criar a base de uma lib? �  então senta ai na cadeira, pega a pipoca e vamo pro vídeo!",
+      "date": "14/01/2022"
+    },
+    {
+      "id": "3",
+      "video": "https://www.youtube.com/embed/R41_Qedrzik",
+      "title": "Como documentar códigos? Documentando Front End com Storybook!",
+      "content": "Como você documenta seus códigos hoje? Nesse vídeo vou mostrar passo a passo como faço pra adicionar o storybook em um projeto, documentando um componente, gerando a doc interativa dele e muito mais! Mostrando ali o REAL camino das pedras pra você começar a usar em seus ",
+      "date": "08/01/2022"
+    },
+    {
+      "id": "4",
+      "video": "https://www.youtube.com/embed/R41_Qedrzik",
+      "title": "Como documentar códigos? Documentando Front End com Storybook!",
+      "content": "Como você documenta seus códigos hoje? Nesse vídeo vou mostrar passo a passo como faço pra adicionar o storybook em um projeto, documentando um componente, gerando a doc interativa dele e muito mais! Mostrando ali o REAL camino das pedras pra você começar a usar em seus ",
+      "date": "08/01/2022"
+    }
+  ]
+}

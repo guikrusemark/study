@@ -1,0 +1,25 @@
+.tags {
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d9d9d9;
+  font-family: "GandhiSansRegular";
+  font-size: 16px;
+}
+.tags p {
+  font-size: 1.25rem;
+}
+.tags__lista {
+  list-style: none;
+  width: 380px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.tags__lista li {
+  background-color: rgba(148, 163, 184, 0.3);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}/*# sourceMappingURL=Tags.module.css.map */

@@ -1,0 +1,42 @@
+{% block template %}
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ url_for('static', filename='bootstrap.css') }}" rel="stylesheet">
+    </head>
+    <body>
+
+        <a class="btn btn-primary" href="{{ url_for('index') }}">
+            Home
+        </a>
+        <a class="btn btn-primary" href="{{ url_for('login') }}">
+            Login
+        </a>
+        <a class="btn btn-primary" href="{{ url_for('logout') }}">
+            Sign out
+        </a>
+
+        <span>
+            {% if user != None %}
+               Bem-vindo {{ user }}
+            {% else %}
+                Você não está logado
+            {% endif %}
+        </span>
+
+<!--        {% with messages = get_flashed_messages() %}-->
+<!--            {% if messages %}-->
+<!--                <ul class="list-unstyled" id="messages">-->
+<!--                    {% for message in messages %}-->
+<!--                        <li class="alert alert-success">{{ message }}</li>-->
+<!--                    {% endfor %}-->
+<!--                </ul>-->
+<!--            {% endif %}-->
+<!--        {% endwith %}-->
+
+        {% block main_content %}
+        {% endblock %}
+    </body>
+    </html>
+{% endblock %}

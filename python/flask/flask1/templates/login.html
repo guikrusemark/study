@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    {% block login %}
+    <div class="container">
+        <h1>Faça seu login</h1>
+        <form action="{{ url_for('auth') }}" method="POST">
+            <input type="hidden" name="previous_page" value="{{ previous_page }}">
+            <p>
+                <label for="usuario">Nome de usuário:</label>
+                <input class="form-control" id="usuario" name="username" required type="text">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input class="form-control" id="senha" name="password" required type="password">
+            </p>
+            <p>
+                <button class="btn btn-primary" type="submit">Entrar</button>
+            </p>
+        </form>
+    </div>
+    {% endblock %}
+{% endblock %}
