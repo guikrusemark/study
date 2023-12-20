@@ -1,0 +1,38 @@
+.secao {
+    display: grid;
+    align-items: end;
+    row-gap: 2rem;
+}
+
+.secao-horizontal, .secao-vertical {
+    grid-template-rows: 70px auto;
+}
+
+.secao-horizontal .secao__cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr));
+    gap: 1.25rem;
+}
+
+.secao-vertical {
+    grid-template-columns: 1fr auto;
+}
+
+.secao-vertical .secao__cartoes {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-column: 1/3;
+    column-gap: 1.25rem;
+}
+
+.secao-vertical .secao__cartoes .cartao a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.secao-vertical .secao__cartoes .cartao__titulo {
+    flex-grow: 1;
+}
