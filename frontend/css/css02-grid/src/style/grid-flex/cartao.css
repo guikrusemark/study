@@ -6,7 +6,7 @@
 }
 
 .secao-horizontal .cartao__imagem {
-    grid-area: 1 / 1 / 4 / 2;
+    /* grid-area: 1 / 1 / 4 / 2; */
 }
 
 .secao-horizontal .cartao__botao {

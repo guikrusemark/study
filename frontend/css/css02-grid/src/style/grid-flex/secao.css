@@ -5,7 +5,7 @@
 }
 
 .secao-horizontal, .secao-vertical {
-    grid-template-rows: 70px auto;
+    /* grid-template-rows: 70px auto; */
 }
 
 .secao-horizontal .secao__cartoes {

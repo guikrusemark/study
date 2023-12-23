@@ -114,7 +114,7 @@ main {
 /*Seção horizontal*/
 
 .secao-horizontal .cartao {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .secao-horizontal .cartao__imagem {

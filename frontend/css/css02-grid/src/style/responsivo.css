@@ -6,7 +6,7 @@
     .secao-horizontal .cartao__botao,
     .secao-horizontal .cartao__player,
     .secao-vertical .secao__link {
-        display: none;
+        /* display: none; */
     }
 
     .container {
