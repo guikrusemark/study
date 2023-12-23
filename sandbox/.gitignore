@@ -1,0 +1,8 @@
+file
+
+# Ignore all pycache en envinment files in all subdirectories
+**/__pycache__/
+**/.mypy_cache/
+**/venv/
+**/.venv/
+**/.vscode/
