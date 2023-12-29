@@ -1,0 +1,79 @@
+
+@import '../abstract/variaveis';
+@import '../abstract/mixins';
+#contatos {
+    @include central-margin;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    .imgs-contatos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+
+        img:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        img:nth-child(2) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        img:nth-child(3) {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    }
+
+    .form-contato {
+        background: $verde-gradiente;
+        padding: 2rem;
+        border-radius: 34px;
+        ;
+        max-width: 560px;
+        display: grid;
+        align-content: space-between;
+
+        .title {
+            @include title(26px, $roxo-vibrante);
+        }
+
+        .infos {
+            @include paragraph(20px);
+            line-height: 2rem;
+            margin: 2rem 0;
+        }
+
+        .inputs {
+            display: grid;
+            gap: .5rem;
+
+            label {
+                @include paragraph(16px);
+                font-weight: bold;
+            }
+
+            input {
+                border-radius: 25px;
+                padding: 1rem;
+                border: none;
+            }
+
+            textarea {
+                @extend input;
+                height: 70px;
+            }
+        }
+
+        button {
+            height: 45px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            background: $roxo-vibrante;
+        }
+    }
+}

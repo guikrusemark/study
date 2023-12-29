@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>Calmaria</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./assets/logo.png" alt="logo">
+            <span class="line"></span>
+            <ul>
+                <li><a href="#">Nosso espaço</a></li>
+                <li><a href="#">Servicos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+
+            <div class="text-inner">
+                <h1>Boas-vindas ao seu refúgio de paz e bem-estar</h1>
+                <button class="btn-main">Quero relaxar</button>
+            </div>
+            <img class="img-home" src="./assets/home-image.png" alt="">
+
+        </section>
+    </header>
+    <section id="nosso-espaco">
+        <div class="details-inner">
+            <img src="./assets/espaco-1.png" alt="">
+            <div class="espaco-textos">
+                <p class="title">Tecnologia e natureza potencializando seu relaxamento</p>
+                <p class="infos">Oferecemos equipamentos de ponta, produtos certificados e uma equipe de
+                    profissionais ultra qualificados para dissipar seu estresse e ajudar você na busca por
+                    equilíbrio e tranquilidade.</p>
+                <object data="./assets/separador-direita.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="details-inner">
+            <div class="espaco-textos">
+                <p class="title">Elevando seu bem-estar a um novo patamar</p>
+                <p class="infos">No Calmaria Spa cada visita é uma jornada revigorante para mais serenidade e
+                    disposição! Independente da sua rotina, vamos ajudar você a encontrar seu paraíso
+                    particular.</p>
+                <object data="./assets/separador-esquerda.svg" type="image/svg+xml"></object>
+            </div>
+            <img src="./assets/espaco-2.png" alt="">
+            <img src="./assets/espaco-3.png" alt="">
+        </div>
+    </section>
+    <section id="servico">
+        <!-- <div class="container"> -->
+        <div class="cards">
+            <div class="card">
+                <img src="./assets/icon-massagem.png" alt="">
+                <p class="title">Massagens</p>
+                <img src="./assets/Soft Star.png" alt="">
+                <div class="text-details">Relaxantes, terapêuticas, desportivas e drenagens. Conte com nossos terapeutas
+                    especializados para aliviar suas tensões, tratar dores e retenção de líquido através
+                    dessa técnica milenar tão eficiente para o organismo humano.</div>
+            </div>
+            <div class="card">
+                <img src="./assets/icon-tratamentos.png" alt="">
+                <p class="title">Tratamentos Corporais</p>
+                <img src="./assets/Soft Star.png" alt="">
+                <div class="text-details">Tratamos sua pele com gentileza através de esfoliações corporais suaves,
+                    hidratações profundas do corpo e do rosto, além de limpeza facial. Você também pode desfrutar de
+                    banhos revigorantes de sais.</div>
+            </div>
+            <div class="card">
+                <img src="./assets/icon-dias-especiais.png" alt="">
+                <p class="title">Dias especiais</p>
+                <img src="./assets/Soft Star.png" alt="">
+                <div class="text-details">Pacotes cuidadosamente elaborados, desde o "Dia Revitalizante" com
+                    massagens e tratamentos faciais, até o "Dia Serenidade" com banhos terapêuticos e meditação.
+                    Mime-se com momentos de refúgio de tranquilidade.</div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+    <section id="descontos">
+        <img src="./assets/mandala-esquerda.png" alt="">
+        <div class="form-inscricao">
+            <h4 class="title">Inscreva-se para ganhar descontos!</h4>
+            <p>Cadastre seu email para receber descontos e novidades sobre o espaço e nossos serviços.</p>
+            <div class="input-btn">
+                <input type="email">
+                <button type="submit">Inscrever</button>
+            </div>
+        </div>
+        <img src="./assets/mandala-direita.png" alt="">
+    </section>
+    <section id="contatos">
+        <div class="imgs-contatos">
+            <img src="./assets/contato-img-1.png" alt="">
+            <img src="./assets/contato-img-2.png" alt="">
+            <img src="./assets/contato-img-3.png" alt="">
+        </div>
+        <div class="form-contato">
+            <div class="texts">
+                <p class="title">Entre em contato</p>
+                <p class="infos">Reserve seu horário, tire dúvidas ou proponha sugestões, nosso canal é aberto para você!</p>
+            </div>
+                <div class="inputs">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                <label for="mensagem">Mensagem</label>
+                <textarea type="text" id="mensagem" placeholder="Escreva sua mensagem"></textarea>
+            </div>
+            <button>Enviar</button>
+        </div>
+    </section>
+    <footer>
+        <small>Desenvolvido por Alura. Projeto fictício sem fins comerciais.</small>
+    </footer>
+</body>
+
+</html>
