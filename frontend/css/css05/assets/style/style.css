@@ -1,0 +1,492 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /*cores*/
+    --amarelo: #FFC756;
+    --laranja: #F66139;
+    --lilas: #7F8FFE;
+    --verde: #56B78C;
+    --cinza-claro: #D9D9D9;
+    --cinza-escuro: #959595;
+
+    /*fontes*/
+    --fonte-primaria: 'Work Sans', sans-serif;
+    --fonte-secundaria: 'Fjalla One', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-primaria);
+    height: 100vh;
+}
+
+/*Estilos compartilhados*/
+.categorias__titulo,
+.destaques,
+.eventos__titulo,
+.agenda__titulo {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--fonte-secundaria);
+}
+
+img {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
+/* Header */
+
+.menu {
+    background-color: black;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+    height: 258px;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+}
+
+.menu__titulo {
+    background-image: url("../img/logo-branco-maior.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 100px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu__item a {
+    transition: .5s;
+    color: white;
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    color: var(--amarelo);
+}
+
+.menu__pesquisar {
+    width: 100%;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.menu__input {
+    color: white;
+    background-color: black;
+    background-image: url("../img/icone-busca.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 98%;
+    line-height: 25px;
+    padding-left: 5px;
+}
+
+.menu__item:nth-child(4)::before {
+    padding-right: 8px;
+    content: url("../img/icone-gps.png");
+    cursor: pointer;
+    transition: 3.3s;
+}
+
+.menu__item:nth-child(4)::after {
+    padding-left: 8px;
+    content: url("../img/icone-seta.png");
+    cursor: pointer;
+    transition: 3.3s;
+}
+
+.menu__item:nth-child(4)::after:hover,
+.menu__item:nth-child(4)::before:hover {
+    background-color: var(--amarelo);
+}
+
+
+/*main*/
+
+.principal {
+    padding: 0 1.5rem;
+}
+
+/*banner*/
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*categorias*/
+.categorias {
+    margin-top: 1.5rem;
+}
+
+.categorias__titulo {
+    margin-bottom: 1rem;
+}
+
+.categorias__lista {
+    color: white;
+    text-align: center;
+}
+
+.categorias__item {
+    padding: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+    opacity: 1;
+    min-width: 282px;
+}
+
+.categorias__item:hover {
+    opacity: 0.7;
+}
+
+.categorias__lista .categorias__item:nth-child(1),
+.categorias__item:nth-child(5) {
+    background-color: var(--amarelo);
+}
+
+.categorias__lista .categorias__item:nth-child(2),
+.categorias__item:nth-child(6) {
+    background-color: var(--laranja);
+}
+
+.categorias__lista .categorias__item:nth-child(3),
+.categorias__item:nth-child(7) {
+    background-color: var(--lilas);
+}
+
+.categorias__lista .categorias__item:nth-child(4),
+.categorias__item:nth-child(8) {
+    background-color: var(--verde);
+}
+
+.destaques {
+    padding: 30px 0 10px;
+    white-space: nowrap;
+}
+
+.destaques__titulo {
+    margin: 1rem 0;
+}
+
+.destaques__barra {
+    width: 131px;
+    height: 2px;
+    background-color: black;
+}
+
+.categorias__destaques img:last-of-type {
+    padding-left: 10px;
+}
+
+.categorias__imagem {
+    margin-bottom: 1.5rem;
+    background-image: url("../img/destaques-360.png");
+    background-repeat: no-repeat;
+    height: 271px;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.categorias__imagem:hover {
+    opacity: 0.7;
+}
+
+/* Eventos */
+
+.eventos__titulo {
+    margin-bottom: 1rem;
+}
+
+.eventos__item {
+    background-color: var(--cinza-claro);
+    width: 307px;
+    padding-bottom: 1rem;
+    height: 318px;
+}
+
+.eventos__item img {
+    width: 100%;
+}
+
+.eventos__item h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.eventos__item h4,
+.eventos__item h5 {
+    font-size: 16px;
+}
+
+.eventos__item h3,
+.eventos__item h4,
+.eventos__item h5 {
+    padding-left: 1rem;
+}
+
+.eventos__item button {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-right: 1rem;
+    text-align: center;
+    padding: .5rem 0;
+    width: 80px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.eventos__botao button:hover,
+.agenda__botao button:hover,
+.eventos__item button:hover,
+.agenda__atracao button:hover {
+    background-color: var(--amarelo);
+}
+
+.eventos__botao button,
+.agenda__botao button {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: .75rem 0;
+    width: 148px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/*Agenda*/
+
+.agenda__titulo {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.agenda__item {
+    background-color: var(--cinza-claro);
+}
+
+.agenda__item img {
+    width: 100%;
+}
+
+.agenda__item .agenda__informacoes {
+    text-align: center;
+    background-color: var(--cinza-escuro);
+    color: white;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.agenda__informacoes h3 {
+    font-size: 2rem;
+}
+
+.agenda__informacoes h4,
+.agenda__informacoes h5 {
+    font-size: 1.5rem;
+}
+
+.agenda__item .agenda__atracao {
+    text-align: center;
+    padding: 1rem;
+}
+
+.agenda__atracao h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.agenda__atracao button {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: .5rem 0;
+    width: 125px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Footer */
+
+.rodape {
+    color: var(--cinza-claro);
+    background-color: black;
+    margin: 1rem 0;
+    font-size: 14px;
+    font-family: var(--fonte-primaria);
+    padding: 1rem 1.5rem;
+    line-height: 2;
+    white-space: nowrap;
+}
+
+.rodape__lista {
+    width: 135px;
+}
+
+.rodape__titulo {
+    font-size: 18px;
+    font-family: var(--fonte-secundaria);
+}
+
+.rodape__logo {
+    font-size: 12px;
+}
+
+.rodape__logo h4 {
+    background-image: url("../img/logo_rodape.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+}
+
+@media(min-width: 720px) {
+
+    /* Header */
+    .menu {
+        height: 217px;
+    }
+
+    .menu__titulo {
+        width: auto;
+        padding: 40px 55px;
+    }
+
+    .cabecalho__seu-local::before {
+        padding-right: 8px;
+    }
+
+    .cabecalho__seu-local::after {
+        padding-left: 15px;
+    }
+
+    .menu__pesquisar {
+        width: 312px;
+    }
+
+    /*main*/
+
+    .principal {
+        padding: 0 2.5rem;
+    }
+
+    /* Categorias */
+    .categorias__lista {
+        height: 304px;
+    }
+
+    .destaques__barra {
+        width: 417.96px;
+    }
+
+    .categorias__imagem {
+        background-image: url("../img/apresentacao-720.png");
+    }
+
+    /* Agenda */
+
+    .agenda__item {
+        width: 308px;
+    }
+
+    /* Rodapé */ 
+
+    .rodape {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+}
+
+@media(min-width: 1440px) {
+
+    /* Header */
+    .menu {
+        height: 100px;
+        font-size: 20px;
+        padding: 0 7.5rem;
+    }
+
+    .menu__titulo {
+        background-image: url("../img/logo-branco-menor.png");
+        padding: 43px 55px;
+    }
+
+    .menu__pesquisar {
+        width: 384px;
+        margin-bottom: 0;
+    }
+
+    .menu__input {
+        padding-left: 15px;
+    }
+
+    /*main*/
+
+    .principal {
+        padding: 0 7.5rem;
+    }
+
+    /*categorias*/
+    .categorias {
+        margin-bottom: 1.5rem;
+    }
+
+    .categorias__titulo {
+        margin-bottom: 0;
+    }
+
+    .destaques {
+        padding: 0;
+    }
+
+    .destaques .destaques__barra {
+        width: 416px;
+    }
+
+    .categorias__imagem {
+        height: 224px;
+        margin-bottom: 0;
+        background-position-y: bottom;
+    }
+
+    /*Eventos*/
+
+    .eventos__item {
+        width: 280px;
+    }
+
+    /*Agenda*/
+
+    .agenda__item {
+        width: 330px;
+    }
+
+    /* Rodapé */
+
+    .rodape {
+        padding-left: 7.5rem;
+        padding-right: 7.5rem;
+    }
+
+}

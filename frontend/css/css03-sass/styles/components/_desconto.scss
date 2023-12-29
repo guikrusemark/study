@@ -1,0 +1,42 @@
+@import '../abstract/variaveis';
+@import '../abstract/mixins';
+#descontos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .form-inscricao {
+        text-align: center;
+        .title {
+            @include title(30px, $roxo-escuro);
+            margin: 1rem 0;
+        }
+        p {
+            @include paragraph(22px);
+            margin: 1rem 0;
+        }
+        .input-btn{
+            width: 790px;
+            height: 65px;
+            border-radius: 65px;
+            border: 1px solid $roxo-vibrante;
+            margin: 0 auto;
+            display: inline-flex;
+            input{
+                border: none;
+                outline: none;
+                width: 65%;
+                margin-left: 2rem;
+                @include paragraph(22px);
+            }
+            button{
+                width: 35%;
+                color: white;
+                background: $roxo-vibrante;
+                border-radius: 0 65px 65px 0;
+                border: none;
+                font-size: 18px;
+                
+            }
+        }
+    }
+}

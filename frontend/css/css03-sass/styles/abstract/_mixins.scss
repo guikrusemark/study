@@ -1,0 +1,14 @@
+@mixin central-margin(){
+    width: 80%;
+    margin: 0 auto;
+}
+@mixin title($f-size, $color){
+    font-family: $font-krona;
+    font-size: $f-size;
+    color: $color;
+}
+@mixin paragraph($f-size){
+    font-family: $font-montserrat;
+    font-size: $f-size;
+    color: $roxo-escuro;
+}

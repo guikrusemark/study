@@ -1,0 +1,30 @@
+@import '../abstract/variaveis';
+@import '../abstract/mixins';
+
+#nosso-espaco {
+    @include central-margin;
+    .details-inner{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img{
+           height: 320px;
+           margin: 1rem;
+        }
+        .espaco-textos{
+            padding: 1rem;
+            max-width: 700px;
+            .title{
+                @include title(31px, $roxo-vibrante);
+            }
+            .infos{
+                @include paragraph(22px);
+                margin: 1rem 0;
+            }
+            object{
+                width: 100%;
+            }
+        }
+    }
+}
