@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "src": "/assets/images/categorias/categoria-camiseta.png",
+    "alt": "Camiseta masculina de manga na cor verde, com bolso, com detalhe vermelho.",
+    "descricao": "Camisetas"
+  },
+  {
+    "id": 2,
+    "src": "/assets/images/categorias/categoria-bolsa.png",
+    "alt": "Bolsa feminina de couro na cor marrom, com cortes quadrados, e alça dourada em formato de corrente com detalhe verde, em fundo verde limão.",
+    "descricao": "Bolsas"
+  },
+  {
+    "id": 3,
+    "src": "/assets/images/categorias/categoria-calcados.png",
+    "alt": "Par de tênis unissex com cor predominante branca e traços na cores laranja, azul, verde e cadarço vermelho, em fundo verde limão.",
+    "descricao": "Calçados"
+  },
+  {
+    "id": 4,
+    "src": "/assets/images/categorias/categoria-calcas.png",
+    "alt": "Quatro calças jeans dobradas e organizadas uma acima da outra, em fundo verde limão.",
+    "descricao": "Calças"
+  },
+  {
+    "id": 5,
+    "src": "/assets/images/categorias/categoria-casacos.png",
+    "alt": "Casaco masculino na cor marrom em fundo verde limão.",
+    "descricao": "Casacos"
+  },
+  {
+    "id": 6,
+    "src": "/assets/images/categorias/categoria-oculos.png",
+    "alt": "Óculos de Sol com lentes arredondadas e armação dourada, em fundo verde limão.",
+    "descricao": "Óculos"
+  }
+]

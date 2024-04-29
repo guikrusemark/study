@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "src": "/assets/images/produtos/camiseta.png",
+    "alt": "Modelo masculo vestindo touca preta, blusa marrom e calça jeans, com uma parede cinza de fundo.",
+    "titulo": "Camiseta conforto",
+    "descricao": "Multicores e tamanhos. Tecido de algodão 100% fresquinho.",
+    "preco": 70.0
+  },
+  {
+    "id": 2,
+    "src": "/assets/images/produtos/calca.png",
+    "alt": "Modelo feminina vestindo blusa marrom, calça bege, par de sapatos altos na cor branca, cordão e pulseira, em um ambiente aberto com chão de terra e matos secos.",
+    "titulo": "Calça Alfaiataria",
+    "descricao": "Modelo Wide Leg alfaiataria em linho. Uma peça para vida toda!",
+    "preco": 180.0
+  },
+  {
+    "id": 3,
+    "src": "/assets/images/produtos/tenis.png",
+    "alt": "Foco nos pés de modelo usando par de tênis e meia na cor branca, e calça na cor preta, pisando em uma poça de água.",
+    "titulo": "Tênis Chunky",
+    "descricao": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
+    "preco": 250.0
+  },
+  {
+    "id": 4,
+    "src": "/assets/images/produtos/jaqueta-jeans.png",
+    "alt": "Modelo masculino vestindo toca e calça na cor preta, jaqueta jeans azul, blusa branca e cordão dourado, em um fundo branco.",
+    "titulo": "Jaqueta Jeans",
+    "descricao": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
+    "preco": 150.0
+  },
+  {
+    "id": 5,
+    "src": "/assets/images/produtos/oculos.png",
+    "alt": "Modelo masculino com blusa branca e um par de óculos de lentes transparentes arredondadas, utilizando um notebook, com um cachorro poodle branco no seu colo, e em um fundo branco.",
+    "titulo": "Óculos Redondo",
+    "descricao": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
+    "preco": 120.0
+  },
+  {
+    "id": 6,
+    "src": "/assets/images/produtos/bolsa.png",
+    "alt": "Cintura, pernas e pés de modelo feminina vestindo sobretudo de cor predominante bege com detalhes em tom vermelho e escuro, com calça e par de sapatos na cor preta, segurando bolsa na cor bege, com fundo de prédio.",
+    "titulo": "Bolsa coringa",
+    "descricao": "Bolsa camel em couro sintético de alta duração. Perfeita!",
+    "preco": 120.0
+  }
+]
