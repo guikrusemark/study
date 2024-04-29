@@ -1,0 +1,164 @@
+#root {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.texto-menor {
+  font-size: 13px;
+}
+
+.divs-facilidades {
+  width: 325px;
+}
+
+.div-novidades {
+  width: 325px;
+}
+
+.botao-lilas {
+  background-color: #9353ff;
+}
+
+.btn-outline-purple {
+  border-color: #9353ff;
+  color: #9353ff;
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  border-color: #9353ff;
+  color: #9353ff;
+}
+
+.verde-limao {
+  color: #daff01;
+}
+
+.custom-image {
+  width: 109px;
+  height: 165px;
+  object-fit: cover;
+}
+
+.custom-img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+}
+
+/*pagina carrinho */
+.secao__compra {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.conteudo {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 32px;
+}
+
+.divisor {
+  height: 1px;
+  background-color: #fff;
+}
+
+.divisor__verde {
+  height: 2px;
+  background-color: #daff01;
+}
+
+.detalhe__compra {
+  width: 100%;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.botao__circular {
+  width: 30px;
+  height: 30px;
+}
+
+.botao__excluir {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .div-novidades {
+    width: 696px;
+  }
+
+  .produto {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .imagem__produto {
+    width: 109px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .descricao {
+    width: 165px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .secao__compra {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .conteudo {
+    flex-direction: row;
+  }
+
+  .detalhe__compra {
+    width: 70%;
+  }
+
+  .sumario {
+    width: 30%;
+  }
+
+  .descricao {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-height {
+    height: 415px;
+  }
+
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cover-left {
+    object-position: left;
+  }
+
+  .cover-center {
+    object-position: center;
+  }
+}

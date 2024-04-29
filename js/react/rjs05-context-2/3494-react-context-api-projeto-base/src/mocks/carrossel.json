@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "src": "/assets/images/banner1-desktop.png",
+    "alt": "Modelo feminina vestindo blusa rosa fluorescente, em fundo lilás.",
+    "itemCarrossel": false
+  },
+  {
+    "id": "2",
+    "src": "/assets/images/banner2-desktop.png",
+    "alt": "Modelo feminina utilizando óculos escuros e vestindo conjunto esportivo de blusa e calça na cor preta, sentada em um sofá preto em um fundo rosa.",
+    "itemCarrossel": {
+      "titulo": "COLEÇÃO ATEMPORAL",
+      "subtitulo": "Estilo e qualidade para durar."
+    }
+  },
+  {
+    "id": "3",
+    "src": "/assets/images/banner3-desktop.png",
+    "alt": "Modelo feminina utilizando óculos escuros e vestindo conjunto esportivo de blusa e calça na cor preta, sentada em um sofá preto em um fundo rosa.",
+    "itemCarrossel": {
+      "titulo": "COLEÇÃO ATEMPORAL",
+      "subtitulo": "Alto impacto visual, baixo impacto ambiental!"
+    }
+  }
+]
