@@ -1,24 +1,25 @@
-import { renderBooks } from './render.js';
-import { setListeners } from './listener.js';
+import { setListeners } from "./listener.js";
+import { renderBooks } from "./render.js";
 
 let books = [];
 
 fetchBooks()
-    .then(() => applyDisccount(books))
-    .then(() => renderBooks(books))
-    .then(() => setListeners(books));
-
+	.then(() => applyDisccount(books))
+	.then(() => renderBooks(books))
+	.then(() => setListeners(books));
 
 async function fetchBooks() {
-    const response = await fetch('https://guilhermeonrails.github.io/casadocodigo/livros.json');
-    books = await response.json();
-  
-    console.table(books); // just to see the data
+	const response = await fetch(
+		"https://guilhermeonrails.github.io/casadocodigo/livros.json",
+	);
+	books = await response.json();
+
+	console.table(books); // just to see the data
 }
 
 function applyDisccount(books) {
-    return books.map(book => {
-        book.preco = book.preco * 0.1;
-        return book;
-    });
+	return books.map((book) => {
+		book.preco = book.preco * 0.1;
+		return book;
+	});
 }
