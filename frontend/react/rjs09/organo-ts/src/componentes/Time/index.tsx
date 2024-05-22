@@ -1,7 +1,7 @@
 import React from "react";
+import type { IColaborador } from "../../common/interfaces/IColaborador";
 import Colaborador from "../Colaborador";
 import "./Time.css";
-import type { IColaborador } from "../../common/interfaces/IColaborador";
 
 interface TimeProps {
 	corPrimaria: string;

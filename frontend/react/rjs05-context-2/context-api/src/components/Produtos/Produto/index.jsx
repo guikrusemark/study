@@ -1,16 +1,12 @@
 import Botao from "@/components/Botao";
-import { formatadorMoeda } from "@/utils/formatadorMoeda";
-import React from "react";
 
-const Produto = ({
-	src,
-	id,
-	alt,
-	titulo,
-	descricao,
-	preco,
-	adicionarProduto,
-}) => {
+import useCartContext from "@/hooks/useCartContext";
+
+import { formatadorMoeda } from "@/utils/formatadorMoeda";
+
+const Produto = ({ src, id, alt, titulo, descricao, preco }) => {
+	const { addProduct, carrinho, setCarrinho } = useCartContext();
+
 	return (
 		<div className="col-12 col-md-6 col-xxl-4 pb-4">
 			<div className="card">
@@ -24,8 +20,12 @@ const Produto = ({
 						variant="primary"
 						type="button"
 						className="border-0"
-						handleClick={() =>
-							adicionarProduto({ src, alt, id, titulo, descricao, preco })
+						onClick={() =>
+							addProduct(
+								{ src, alt, id, titulo, descricao, preco },
+								carrinho,
+								setCarrinho,
+							)
 						}
 					>
 						Adicionar ao carrinho

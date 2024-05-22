@@ -5,14 +5,7 @@ import Sumario from "@/components/Sumario";
 import Titulo from "@/components/Titulo";
 import React from "react";
 
-const Carrinho = ({
-	carrinho,
-	adicionarProduto,
-	removerProduto,
-	removerProdutoCarrinho,
-	valorTotalCarrinho,
-	quantidadeProdutos,
-}) => {
+const Carrinho = () => {
 	return (
 		<>
 			<BarraNavegacao />
@@ -27,17 +20,9 @@ const Carrinho = ({
 							<Titulo className="text-center fw-bold mb-3 text-md-start">
 								Detalhes da compra
 							</Titulo>
-							<ListaProdutosCarrinho
-								carrinho={carrinho}
-								adicionarProduto={adicionarProduto}
-								removerProduto={removerProduto}
-								removerProdutoCarrinho={removerProdutoCarrinho}
-							/>
+							<ListaProdutosCarrinho />
 						</div>
-						<Sumario
-							valorTotalCarrinho={valorTotalCarrinho}
-							quantidadeProdutos={quantidadeProdutos}
-						/>
+						<Sumario />
 					</div>
 				</section>
 			</main>

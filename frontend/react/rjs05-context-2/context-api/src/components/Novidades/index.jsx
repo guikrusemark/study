@@ -1,7 +1,6 @@
 import Botao from "@/components/Botao";
 import CampoTexto from "@/components/CampoTexto";
 import Titulo from "@/components/Titulo";
-import React from "react";
 
 const Novidades = () => {
 	return (

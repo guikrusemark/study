@@ -1,10 +1,10 @@
 import type React from "react";
 import { useState } from "react";
+import type { IColaborador } from "../../common/interfaces/IColaborador";
 import Botao from "../Botao";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
-import type { IColaborador } from "../../common/interfaces/IColaborador";
 
 interface FormularioProps {
 	times: Array<string>;

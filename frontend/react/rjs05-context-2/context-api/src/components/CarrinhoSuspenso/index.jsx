@@ -1,16 +1,10 @@
 import Botao from "@/components/Botao";
 import ListaProdutosCarrinho from "@/components/ListaProdutosCarrinho";
 import Titulo from "@/components/Titulo";
-import React from "react";
+
 import TotalCarrinho from "./TotalCarrinho";
 
-const CarrinhoSuspenso = ({
-	carrinho,
-	adicionarProduto,
-	removerProduto,
-	removerProdutoCarrinho,
-	valorTotalCarrinho,
-}) => {
+const CarrinhoSuspenso = () => {
 	return (
 		<div
 			className="offcanvas offcanvas-end text-bg-dark"
@@ -34,13 +28,8 @@ const CarrinhoSuspenso = ({
 				/>
 			</div>
 			<div className="offcanvas-body">
-				<ListaProdutosCarrinho
-					carrinho={carrinho}
-					adicionarProduto={adicionarProduto}
-					removerProduto={removerProduto}
-					removerProdutoCarrinho={removerProdutoCarrinho}
-				/>
-				<TotalCarrinho valorTotalCarrinho={valorTotalCarrinho} />
+				<ListaProdutosCarrinho />
+				<TotalCarrinho />
 			</div>
 		</div>
 	);
