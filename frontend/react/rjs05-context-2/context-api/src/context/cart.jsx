@@ -1,8 +1,11 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const cartContext = createContext();
-const cartProvider = ({ children }) => {
+cartContext.displayName = "CartContext";
+
+const CartProvider = ({ children }) => {
 	const [carrinho, setCarrinho] = useState([]);
+
 	return (
 		<cartContext.Provider value={{ carrinho, setCarrinho }}>
 			{children}
@@ -10,4 +13,4 @@ const cartProvider = ({ children }) => {
 	);
 };
 
-export { cartContext, cartProvider };
+export { cartContext, CartProvider };

@@ -1,13 +1,4 @@
-import React from "react";
-
-const Botao = ({
-	type,
-	children,
-	variant = "default",
-	className,
-	handleClick,
-	...rest
-}) => {
+const Botao = ({ type, children, variant = "default", className, ...rest }) => {
 	const buttonStyleMap = {
 		default: "btn rounded-0 btn-outline-light",
 		primary: "btn rounded-0 btn-dark botao-lilas",
@@ -26,7 +17,6 @@ const Botao = ({
 		<button
 			className={`${buttonStyleMap[variant]} ${className}`}
 			type={type}
-			onClick={handleClick}
 			{...rest}
 		>
 			{children}

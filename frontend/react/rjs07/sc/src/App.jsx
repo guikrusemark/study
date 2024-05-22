@@ -1,5 +1,5 @@
-import "normalize.css";
 import AppRouter from "@/routes.jsx";
+import "normalize.css";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { StyledEngineProvider } from "@mui/material/styles";

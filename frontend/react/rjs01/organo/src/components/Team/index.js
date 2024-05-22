@@ -1,5 +1,5 @@
-import "./Team.css";
 import Card from "../Card";
+import "./Team.css";
 
 const Team = (props) => {
 	return props.teams.map((team) =>

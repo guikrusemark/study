@@ -1,6 +1,6 @@
 import React from "react";
-import "./Colaborador.css";
 import type { IColaborador } from "../../common/interfaces/IColaborador";
+import "./Colaborador.css";
 
 const Colaborador = ({ nome, imagem, cargo, corDeFundo }: IColaborador) => {
 	return (

@@ -1,10 +1,13 @@
-import Botao from "@/components/Botao";
-import Titulo from "@/components/Titulo";
-import React from "react";
 import { useLocation } from "react-router-dom";
 
-const Quantidade = ({ itemCarrinho, adicionarProduto, removerProduto }) => {
+import useCartContext from "@/hooks/useCartContext";
+
+import Botao from "@/components/Botao";
+import Titulo from "@/components/Titulo";
+
+const Quantidade = ({ itemCarrinho }) => {
 	const location = useLocation();
+	const { addProduct, removeProduct, carrinho, setCarrinho } = useCartContext();
 
 	return (
 		<div
@@ -21,7 +24,7 @@ const Quantidade = ({ itemCarrinho, adicionarProduto, removerProduto }) => {
 				<Botao
 					variant="removeItem"
 					aria-label="Remover item"
-					handleClick={() => removerProduto(itemCarrinho.id)}
+					onClick={() => removeProduct(itemCarrinho, carrinho, setCarrinho)}
 				>
 					-
 				</Botao>
@@ -31,7 +34,7 @@ const Quantidade = ({ itemCarrinho, adicionarProduto, removerProduto }) => {
 				<Botao
 					variant="addItem"
 					aria-label="Adicionar item"
-					handleClick={() => adicionarProduto(itemCarrinho)}
+					onClick={() => addProduct(itemCarrinho, carrinho, setCarrinho)}
 				>
 					+
 				</Botao>
