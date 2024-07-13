@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"outDir": "dist/js",
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"module": "ES6",
+		"moduleResolution": "node",
+		"types": ["node"],
+		"lib": ["ES6", "DOM"]
+	},
+	"include": ["app/**/*"]
+}
