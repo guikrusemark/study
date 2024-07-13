@@ -1,0 +1,342 @@
+[
+    {
+        "id": 1,
+        "label_name": "Calciopan B12",
+        "manufacturer": "Calbos",
+        "presentation": "1L",
+        "main_component": "C\u00e1lcio",
+        "main_concentration": 0.05,
+        "side_components": "A, B12, D3",
+        "side_concentrations": null
+    },
+    {
+        "id": 2,
+        "label_name": "\u00d3leo de Peixe Ultra",
+        "manufacturer": "Growth",
+        "presentation": "75 caps",
+        "main_component": "\u00d4mega 3",
+        "main_concentration": 0.75,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 3,
+        "label_name": "Revimax",
+        "manufacturer": "Agener Uni\u00e3o",
+        "presentation": "30 comps",
+        "main_component": "Propentofilina",
+        "main_concentration": "50mg\/cap",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 4,
+        "label_name": "Silmox CL",
+        "manufacturer": "Vansil",
+        "presentation": "10 comps",
+        "main_component": "Amoxicilina Tri-hidratada",
+        "main_concentration": "50mg\/comp",
+        "side_components": "Clavulanato de Pot\u00e1ssio",
+        "side_concentrations": null
+    },
+    {
+        "id": 5,
+        "label_name": "Vetmax Plus",
+        "manufacturer": "Vetnil",
+        "presentation": "30mL",
+        "main_component": "Fembendazol",
+        "main_concentration": "40mg\/mL",
+        "side_components": "Pamoato de Pirantel, Praziquantel",
+        "side_concentrations": "18.8mg\/mL, 8mg\/mL"
+    },
+    {
+        "id": 6,
+        "label_name": "Cefa SID",
+        "manufacturer": "Vansil",
+        "presentation": "10 comps",
+        "main_component": "Cefadroxila",
+        "main_concentration": "110mg\/comp",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 7,
+        "label_name": "Ocitocina Forte UCB",
+        "manufacturer": "UCB VET",
+        "presentation": "50mL",
+        "main_component": "Ocitocina",
+        "main_concentration": "10UI\/mL",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 8,
+        "label_name": "Furanil",
+        "manufacturer": "Vetnil",
+        "presentation": "60mL",
+        "main_component": "Digluconato Clorexidina",
+        "main_concentration": "7mg\/mL",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 9,
+        "label_name": "L-Glutamina",
+        "manufacturer": "Growth",
+        "presentation": "250g p\u00f3",
+        "main_component": "L-Glutamina",
+        "main_concentration": 0.98,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 10,
+        "label_name": "Neocopan Composto",
+        "manufacturer": "Neo Qu\u00edmica",
+        "presentation": "20mL",
+        "main_component": "Butilbrometo de Escopolamina",
+        "main_concentration": "6.67mg\/mL",
+        "side_components": "Dipirona",
+        "side_concentrations": "333.4mg\/mL"
+    },
+    {
+        "id": 11,
+        "label_name": "Nootropil",
+        "manufacturer": "Sanofi",
+        "presentation": "30 comps",
+        "main_component": "Piracetam",
+        "main_concentration": "800mg\/comp",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 12,
+        "label_name": "Still",
+        "manufacturer": "Allergan",
+        "presentation": "5mL",
+        "main_component": "Diclofenaco S\u00f3dico",
+        "main_concentration": 0.001,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 13,
+        "label_name": "Fosfato S\u00f3dico de Prednisolona",
+        "manufacturer": "Prati Donaduzzi",
+        "presentation": "120mL",
+        "main_component": "Fosfato S\u00f3dico de Prednisolona",
+        "main_concentration": "3mg\/mL",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 14,
+        "label_name": "Cefalexina",
+        "manufacturer": "Teuto",
+        "presentation": "60mL",
+        "main_component": "Cefalexina",
+        "main_concentration": "50mg\/mL",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 15,
+        "label_name": "Carproflan",
+        "manufacturer": "Agener Uni\u00e3o",
+        "presentation": "14 comps",
+        "main_component": "Carprofeno",
+        "main_concentration": "25mg\/comp",
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 16,
+        "label_name": "Aurivet Clean",
+        "manufacturer": "Vetnil",
+        "presentation": "120mL",
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": "\u00c1cido L\u00e1tico, Melaleuca, Alanto\u00edna, Docusato de S\u00f3dio (DSS), \u00c1cido Salic\u00edlico, Glicerina, Aloe Vera",
+        "side_concentrations": "2.9%, 1%, 1%, 1.95%, 0.1%, 50.4%, 41.03%"
+    },
+    {
+        "id": 17,
+        "label_name": "Tenys P\u00e9",
+        "manufacturer": "Baruel",
+        "presentation": "100g",
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 18,
+        "label_name": "Mylanta Plus",
+        "manufacturer": "Janssen-Cilag",
+        "presentation": "240mL",
+        "main_component": "Hidr\u00f3xido de Alum\u00ednio, Hidr\u00f3xido de Magn\u00e9sio",
+        "main_concentration": "80mg\/mL, 80mg\/mL",
+        "side_components": "Simeticona",
+        "side_concentrations": "6mg\/mL"
+    },
+    {
+        "id": 19,
+        "label_name": "Babymed",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 20,
+        "label_name": "Creme Dental",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 21,
+        "label_name": "Vonau Vet",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 22,
+        "label_name": "Otologic",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 23,
+        "label_name": "Natalene",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 24,
+        "label_name": "Epitezan",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 25,
+        "label_name": "Anti S\u00e9ptico Clo",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 26,
+        "label_name": "Agemoxi CL",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 27,
+        "label_name": "Tobramicina",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 28,
+        "label_name": "Keravit",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 29,
+        "label_name": "E.C.P.",
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 30,
+        "label_name": null,
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 31,
+        "label_name": null,
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 32,
+        "label_name": null,
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 33,
+        "label_name": null,
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    },
+    {
+        "id": 34,
+        "label_name": null,
+        "manufacturer": null,
+        "presentation": null,
+        "main_component": null,
+        "main_concentration": null,
+        "side_components": null,
+        "side_concentrations": null
+    }
+]
