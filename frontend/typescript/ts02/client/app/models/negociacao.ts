@@ -13,4 +13,13 @@ export class Negociacao {
 		const data = new Date(this._data.getTime());
 		return data;
 	}
+
+	public static criaDe(data: string, qtd: string, valor: string): Negociacao {
+		const exp = /-/g;
+		const _data = new Date(data.replace(exp, ","));
+		const _qtd = Number.parseInt(qtd);
+		const _valor = Number.parseFloat(valor);
+
+		return new Negociacao(_data, _qtd, _valor);
+	}
 }

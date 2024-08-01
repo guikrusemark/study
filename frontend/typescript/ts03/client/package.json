@@ -1,0 +1,30 @@
+{
+  "name": "alurabank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"bun run watch\" \"bun run server\"",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "server": "lite-server --baseDir=dist",
+    "lint": "bunx @biomejs/biome check src/",
+    "lint:write": "bunx @biomejs/biome check --write src/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/node": "^20.14.9",
+    "concurrently": "^6.0.0",
+    "lite-server": "^2.6.1",
+    "typescript": "^5.5"
+  },
+  "dependencies": {
+    "undici-types": "^6.19.2"
+  },
+  "trustedDependencies": [
+    "core-js"
+  ]
+}
