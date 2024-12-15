@@ -1,0 +1,20 @@
+.Evento {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #bbbdc750;
+  .descricao {
+    text-decoration: none;
+  }
+  i {
+    cursor: pointer;
+  }
+  &.completo {
+    background: #b7ddf33d;
+    .descricao {
+      text-decoration: line-through;
+    }
+  }
+}

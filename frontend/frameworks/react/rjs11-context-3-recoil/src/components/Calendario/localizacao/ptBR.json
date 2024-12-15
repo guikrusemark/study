@@ -1,0 +1,34 @@
+{
+  "buttons": {
+    "today": "Hoje",
+    "agenda": "Agenda",
+    "day": "Dia",
+    "threeDays": "3 Dias",
+    "week": "Semana",
+    "month": "Mês",
+    "showMore": "Mostrar mais"
+  },
+  "months": {
+    "january": "Janeiro",
+    "february": "Fevereiro",
+    "march": "Março",
+    "april": "Abril",
+    "may": "Maio",
+    "june": "Junho",
+    "july": "Julho",
+    "august": "Agosto",
+    "september": "Setembro",
+    "october": "Outubro",
+    "november": "Novembro",
+    "december": "Dezembro"
+  },
+  "weekDays": {
+    "Mon": "Seg",
+    "Tue": "Ter",
+    "Wed": "Qua",
+    "Thu": "Qui",
+    "Fri": "Sex",
+    "Sat": "Sab",
+    "Sun": "Dom"
+  }
+}

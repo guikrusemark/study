@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "sql-alchemy-1"
+version = "0.1.0"
+description = ""
+authors = ["guikrusemark <guilhermekrusemark@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+SQLAlchemy = "^2.0.36"
+pydantic = "^2.9.2"
+pymysql = "^1.1.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

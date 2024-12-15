@@ -1,0 +1,60 @@
+.MiniBanners {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+        max-height: 185px;
+    }
+
+    .CardCentral {
+        background-color: #f2745f;
+        text-align: center;
+        padding: 30px;
+        color: #FFF;
+
+        h2 {
+            max-width: 70%;
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #631406;
+            font-weight: bold;
+        }
+    }
+}
+
+.Categorias {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .TipoDePrato {
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            overflow: hidden;
+            border: 10px solid #eaf0ff;
+            border-radius: 50%;
+        }
+
+        h4 {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #121212;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+    }
+
+}
+.Links {
+    text-align: center;
+    margin: 2.5rem 0;
+}
