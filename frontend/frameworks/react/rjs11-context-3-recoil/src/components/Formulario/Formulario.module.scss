@@ -24,6 +24,7 @@
     color: #363636;
     -moz-appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     align-items: center;
     border: 1px solid transparent;
     border-radius: 0.375em;
@@ -42,6 +43,7 @@
   }
   .titulo {
     margin-top: 0;
+    margin-bottom: 1rem;
   }
   .botao {
     padding: 12px 24px;

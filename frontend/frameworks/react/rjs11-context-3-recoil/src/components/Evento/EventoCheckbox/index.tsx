@@ -1,15 +1,26 @@
-import React from 'react';
-import { IEvento } from '../../../interfaces/IEvento';
+import { useRecoilValue, useSetRecoilState } from "recoil";
 
-const EventoCheckbox: React.FC<{ evento: IEvento, aoAlterarStatus: (id: number) => void }> = ({ evento, aoAlterarStatus }) => {
-  
-  const estilos = [
-    'far',
-    'fa-2x',
-    evento.completo ? 'fa-check-square' : 'fa-square'
-  ]
+import { listaDeEventosState } from "@/states/atom";
 
-  return (<i className={estilos.join(' ')} onClick={() => aoAlterarStatus(evento.id!)}></i>)
-}
+import type { IEvento } from "../../../interfaces/IEvento";
 
-export default EventoCheckbox
+const EventoCheckbox: React.FC<{
+	evento: IEvento;
+}> = ({ evento }) => {
+	let eventos = useRecoilValue<IEvento[]>(listaDeEventosState);
+	const setListaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState);
+
+	function aoAlterarStatus(evento: IEvento) {
+		if (evento) {
+			eventos = eventos.map((e) =>
+				e.id === evento.id ? { ...e, completo: !e.completo } : e,
+			);
+		}
+		setListaDeEventos(eventos);
+	}
+
+	// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+	return <i onClick={() => aoAlterarStatus(evento)}>O</i>;
+};
+
+export default EventoCheckbox;

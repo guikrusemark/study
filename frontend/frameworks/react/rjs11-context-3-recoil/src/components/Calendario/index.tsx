@@ -1,51 +1,58 @@
+import type React from "react";
 
-import React from 'react'
-import { IEvento } from '../../interfaces/IEvento';
-import style from './Calendario.module.scss';
-import ptBR from './localizacao/ptBR.json'
-import Kalend, { CalendarView } from 'kalend'
-import 'kalend/dist/styles/index.css';
+import Kalend, { CalendarView } from "kalend";
+import { useRecoilValue } from "recoil";
+
+import { listaDeEventosState } from "@/states/atom";
+
+import ptBR from "./localizacao/ptBR.json";
+
+import "kalend/dist/styles/index.css";
+import style from "./Calendario.module.scss";
 
 interface IKalendEvento {
-  id?: number
-  startAt: string
-  endAt: string
-  summary: string
-  color: string
+	id?: number;
+	startAt: string;
+	endAt: string;
+	summary: string;
+	color: string;
 }
 
-const Calendario: React.FC<{ eventos: IEvento[] }> = ({ eventos }) => {
+const Calendario: React.FC = () => {
+	const eventosKalend = new Map<string, IKalendEvento[]>();
+	const eventos = useRecoilValue(listaDeEventosState);
 
-  const eventosKalend = new Map<string, IKalendEvento[]>();
+	for (const evento of eventos) {
+		const chave = evento.id.toString();
 
-  eventos.forEach(evento => {
-    const chave = evento.inicio.toISOString().slice(0, 10)
-    if (!eventosKalend.has(chave)) {
-      eventosKalend.set(chave, [])
-    }
-    eventosKalend.get(chave)?.push({
-      id: evento.id,
-      startAt: evento.inicio.toISOString(),
-      endAt: evento.fim.toISOString(),
-      summary: evento.descricao,
-      color: 'blue'
-    })
-  })
-  return (
-    <div className={style.Container}>
-      <Kalend
-        events={Object.fromEntries(eventosKalend)}
-        initialDate={new Date().toISOString()}
-        hourHeight={60}
-        initialView={CalendarView.WEEK}
-        timeFormat={'24'}
-        weekDayStart={'Monday'}
-        calendarIDsHidden={['work']}
-        language={'customLanguage'}
-        customLanguage={ptBR}
-      />
-    </div>
-  );
-}
+		if (!eventosKalend.has(chave)) {
+			eventosKalend.set(chave, []);
+		}
 
-export default Calendario
+		eventosKalend.get(chave)?.push({
+			id: evento.id,
+			startAt: evento.inicio.toISOString(),
+			endAt: evento.fim.toISOString(),
+			summary: evento.descricao,
+			color: "blue",
+		});
+	}
+
+	return (
+		<div className={style.Container}>
+			<Kalend
+				events={Object.fromEntries(eventosKalend)}
+				initialDate={new Date().toISOString()}
+				hourHeight={60}
+				initialView={CalendarView.WEEK}
+				timeFormat={"24"}
+				weekDayStart={"Monday"}
+				calendarIDsHidden={["work"]}
+				language={"customLanguage"}
+				customLanguage={ptBR}
+			/>
+		</div>
+	);
+};
+
+export default Calendario;
