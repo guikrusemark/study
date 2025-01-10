@@ -1,0 +1,19 @@
+.form {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.input {
+    flex-grow: 1;
+    border-radius: 4px;
+    background: #171D1F;
+    border: none;
+    padding: 8px 16px;
+    color: #BCBCBC;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}   
