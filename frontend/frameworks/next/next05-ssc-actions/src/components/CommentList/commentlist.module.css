@@ -1,0 +1,29 @@
+.comments {
+    background-color: #888;
+    padding: 32px 16px;
+    margin-top: 40px;
+}
+
+.comments ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.comments ul li {
+    padding: 16px 0;
+}
+
+
+.comments .comment {
+    border-bottom: 1px solid black;
+}
+
+
+.comments h2 {
+    color: #171D1F;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+}

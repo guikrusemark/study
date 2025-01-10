@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #0E1112 0%, #00090E 100%);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 56px auto;
+  display: flex;
+  gap: 28px;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+a {
+  color: #81FE88;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  text-decoration-line: underline;
+}
+
+a:visited {
+  color: #81FE88;
+}
+
+::backdrop {
+  background-color: #171D1F;
+  opacity: 0.8;
+}

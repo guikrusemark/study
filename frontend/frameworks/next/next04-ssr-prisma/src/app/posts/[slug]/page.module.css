@@ -1,0 +1,19 @@
+.code {
+    padding: 16px;
+    border-radius: 8px;
+    background: #171D1F;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.24);
+    max-height: 250px;
+    overflow-y: scroll;
+    color: #BCBCBC;
+    line-height: 150%;
+    font-size: 15px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}

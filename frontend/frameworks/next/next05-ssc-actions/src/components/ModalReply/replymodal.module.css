@@ -1,0 +1,29 @@
+.btn {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.divider {
+    margin: 16px 0;
+    height: 88px;
+    border-left: 1px solid #888;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.body strong {
+    color: #81FE88;
+}
+
+.body p {
+    color: #E1E1E1;
+}

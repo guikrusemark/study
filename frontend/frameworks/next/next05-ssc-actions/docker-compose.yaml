@@ -1,0 +1,23 @@
+services:
+  # 'services' define um ou mais serviços, cada um representando um contêiner.
+  
+  postgres:
+    # 'postgres' é o nome dado a este serviço. Você pode nomear o serviço como desejar.
+
+    image: postgres:15-alpine
+    # 'image' especifica a imagem Docker a ser usada para criar o contêiner.
+    # 'postgres:15-alpine' indica que estamos usando a versão 15 da imagem do PostgreSQL, baseada na distribuição Alpine Linux, que é uma versão mais leve.
+
+    ports:
+      - 5432:5432
+    # 'ports' permite mapear portas entre o contêiner e o host (sua máquina).
+    # '5432:5432' significa que a porta 5432 do contêiner será mapeada para a porta 5432 do seu host. Isso permite que você acesse o serviço PostgreSQL pela porta 5432 na sua máquina.
+
+    environment:
+      POSTGRES_DB: codeconnect_dev
+      # 'environment' define variáveis de ambiente dentro do contêiner.
+      # 'POSTGRES_DB' define o nome do banco de dados a ser criado automaticamente quando o contêiner for iniciado pela primeira vez. Aqui, o banco de dados será chamado de 'codeconnect_dev'.
+
+      POSTGRES_HOST_AUTH_METHOD: trust
+      # 'POSTGRES_HOST_AUTH_METHOD' define o método de autenticação.
+      # 'trust' significa que não é necessária senha para conectar ao banco de dados. Isso não é recomendado para ambientes de produção por razões de segurança.

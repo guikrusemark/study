@@ -1,0 +1,63 @@
+.card {
+    width: 486px;
+    border-radius: 8px;
+    background: #171D1F;
+}
+
+.header {
+    border-radius: 8px 8px 0px 0px;
+    background: #888;
+    padding: 24px;
+}
+
+.header figure {
+    margin: 0;
+    position: relative;
+}
+
+.body {
+    color: #BCBCBC;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.body h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; 
+    margin: 0;
+}
+
+.body p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.footer {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p {
+    margin: 0;
+    color: #888;
+    font-size: 15px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+}

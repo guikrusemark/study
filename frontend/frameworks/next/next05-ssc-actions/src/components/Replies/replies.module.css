@@ -1,0 +1,26 @@
+.btn {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-left: 38px;
+    font-size: 12.5px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 1px;
+    background-color: black;
+    display: block;
+}
+
+.replies ul {
+    padding-left: 40px;
+}
