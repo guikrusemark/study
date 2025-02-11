@@ -1,5 +1,4 @@
 from typing import List
-from uuid import uuid4
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import (
@@ -8,14 +7,14 @@ from sqlalchemy.orm import (
     relationship,
 )
 
-from app.config.db import Base, str_sm, uuid_fk, uuid_pk
+from app.config.db import Base, b_uuid7, str_sm, str_uuid, uuid_fk, uuid_pk
 
 
 class User(Base):
     __tablename__ = "users"
 
     id: Mapped[uuid_pk] = mapped_column(
-        default_factory=uuid4,
+        default_factory=b_uuid7,
         init=False,
     )
     name: Mapped[str_sm]
@@ -40,21 +39,19 @@ class User(Base):
         default=True,
     )
 
-
-# class UserCreate(TypedDict):
-#     name: str
-#     id_role: UUID
-#     fullname: str | None
-#     money: float
-#     n_of_accounts: int
-#     is_active: bool
+    def __repr__(self):
+        return (
+            f"User(id={str_uuid(self.id)}, name={self.name}, id_role={str_uuid(self.id_role)}, "
+            f"fullname={self.fullname}, money={self.money}, n_of_accounts={self.n_of_accounts}, "
+            f"is_active={self.is_active})"
+        )
 
 
 class UserRole(Base):
     __tablename__ = "user_roles"
 
     id: Mapped[uuid_pk] = mapped_column(
-        default_factory=uuid4,
+        default_factory=b_uuid7,
         init=False,
     )
     role_name: Mapped[str_sm] = mapped_column(
@@ -64,5 +61,8 @@ class UserRole(Base):
     users: Mapped[List["User"] | None] = relationship(
         back_populates="role",
         repr=False,
-        default=None,
+        default_factory=list,
     )
+
+    def __repr__(self):
+        return f"UserRole(id={str_uuid(self.id)}, role_name={self.role_name})"

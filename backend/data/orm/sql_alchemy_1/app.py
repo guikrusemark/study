@@ -6,38 +6,50 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import Session
 
-# from app.config.db import Base
+from app.config.db import Base
 from app.model.user import (
     User,
-    UserRole,
+    # UserRole,
 )
 
 engine = create_engine(
     os.environ["DB_URI"],
     echo=False,
 )
-# Base.metadata.create_all(engine)
+
+
+def create_db():
+    Base.metadata.create_all(engine)
 
 
 def test():
     with Session(engine) as session:
-        user_role: UserRole = session.scalars(
-            select(UserRole).filter(UserRole.role_name == "user")
-        ).one()
+        # role = UserRole(
+        #     role_name="user",
+        # )
+        # session.add(role)
 
-        user = User(
-            name="Foo2",
-            id_role=user_role.id,
-        )
+        # user_role: UserRole = session.scalars(
+        #     select(UserRole).filter(UserRole.role_name == "user")
+        # ).one()
 
-        session.add(user)
+        # users = [
+        #     User(name="Foo", id_role=user_role.id),
+        #     User(name="Fou", id_role=user_role.id),
+        # ]
         # session.add_all(users)
-        session.commit()
 
-        # users = session.scalars(select(User).filter(User.name == "Foo2")).all()
+        # session.commit()
+
+        # Retrieve and print all users
         users = session.scalars(select(User)).all()
-        print(users)
+        if not users:
+            print("No users found.")
+        else:
+            for user in users:
+                print(user)
 
 
 if __name__ == "__main__":
+    # create_db()
     test()

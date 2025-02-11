@@ -11,6 +11,7 @@ python = "^3.12"
 SQLAlchemy = "^2.0.36"
 pydantic = "^2.9.2"
 pymysql = "^1.1.1"
+uuid-utils = "^0.10.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.7.1"
