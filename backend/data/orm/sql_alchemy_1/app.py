@@ -1,3 +1,5 @@
+import os
+
 from sqlalchemy import (
     create_engine,
     select,
@@ -7,11 +9,11 @@ from sqlalchemy.orm import Session
 # from app.config.db import Base
 from app.model.user import (
     User,
-    # UserRole,
+    UserRole,
 )
 
 engine = create_engine(
-    "mysql+pymysql://root:REMOVED@localhost/test_orm",
+    os.environ["DB_URI"],
     echo=False,
 )
 # Base.metadata.create_all(engine)
@@ -19,26 +21,22 @@ engine = create_engine(
 
 def test():
     with Session(engine) as session:
-        # role = UserRole(
-        #     role_name="user",
-        # )
-        # session.add(role)
-        # role = session.scalars(
-        #     select(UserRole).filter(UserRole.role_name == "user")
-        # ).one()
+        user_role: UserRole = session.scalars(
+            select(UserRole).filter(UserRole.role_name == "user")
+        ).one()
 
-        # user = User(
-        #     name="Foo",
-        #     id_role=role.id,
-        # )
+        user = User(
+            name="Foo2",
+            id_role=user_role.id,
+        )
 
-        user = session.scalars(select(User).filter(User.name == "Foo")).one_or_none()
+        session.add(user)
+        # session.add_all(users)
+        session.commit()
 
-        # session.add_all([user])
-        # session.commit()
-
-        print(user)
-        # print(role)
+        # users = session.scalars(select(User).filter(User.name == "Foo2")).all()
+        users = session.scalars(select(User)).all()
+        print(users)
 
 
 if __name__ == "__main__":

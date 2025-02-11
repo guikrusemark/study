@@ -41,6 +41,15 @@ class User(Base):
     )
 
 
+# class UserCreate(TypedDict):
+#     name: str
+#     id_role: UUID
+#     fullname: str | None
+#     money: float
+#     n_of_accounts: int
+#     is_active: bool
+
+
 class UserRole(Base):
     __tablename__ = "user_roles"
 
