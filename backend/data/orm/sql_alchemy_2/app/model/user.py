@@ -1,4 +1,4 @@
-from typing import List
+from typing import Any, List
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import (
@@ -46,6 +46,17 @@ class User(Base):
             f"is_active={self.is_active})"
         )
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "id": str_uuid(self.id),
+            "name": self.name,
+            "id_role": str_uuid(self.id_role),
+            "fullname": self.fullname,
+            "money": self.money,
+            "n_of_accounts": self.n_of_accounts,
+            "is_active": self.is_active,
+        }
+
 
 class UserRole(Base):
     __tablename__ = "user_roles"
@@ -66,3 +77,9 @@ class UserRole(Base):
 
     def __repr__(self):
         return f"UserRole(id={str_uuid(self.id)}, role_name={self.role_name})"
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "id": str_uuid(self.id),
+            "role_name": self.role_name,
+        }

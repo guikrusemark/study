@@ -18,8 +18,8 @@ engine = create_engine(
 app = FastAPI()
 
 
-@app.get("/users")
-async def read_root() -> dict[str, Any]:
+@app.get("/")
+async def read_users() -> dict[str, Any]:
     with Session(engine) as session:
         users: Sequence[User] = session.scalars(select(User)).all()
 
@@ -28,5 +28,5 @@ async def read_root() -> dict[str, Any]:
 
         return {
             "msg": "Success!",
-            "users": [f"{user}" for user in users],
+            "users": [user.to_dict() for user in users],
         }

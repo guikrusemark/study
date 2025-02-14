@@ -1,5 +1,3 @@
-import os
-
 from sqlalchemy import (
     create_engine,
     select,
@@ -13,7 +11,7 @@ from app.model.user import (
 )
 
 engine = create_engine(
-    os.getenv("DB_URI", "sqlite:///db.sqlite"),
+    "sqlite:///db.sqlite",
     echo=False,
 )
 
@@ -34,8 +32,8 @@ def test():
         # ).one()
 
         # users = [
-        #     User(name="Foo", id_role=user_role.id),
-        #     User(name="Fou", id_role=user_role.id),
+        #     User(name="Bar", id_role=user_role.id),
+        #     User(name="Baz", id_role=user_role.id),
         # ]
         # session.add_all(users)
 
@@ -53,5 +51,5 @@ def test():
 
 
 if __name__ == "__main__":
-    # create_db()
+    create_db()
     test()
