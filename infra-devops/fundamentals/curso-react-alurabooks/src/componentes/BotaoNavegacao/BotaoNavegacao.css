@@ -1,0 +1,12 @@
+.btn-nav {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: space-around;
+}
+
+.btn-nav img {
+    margin-right: 12px;
+}

@@ -1,0 +1,502 @@
+{
+  "pedidos": [
+    {
+      "id": 89019041,
+      "data": "2022-05-26",
+      "entrega": "2022-05-26",
+      "total": 29.9
+    },
+    {
+      "id": 89019963,
+      "data": "2022-07-26",
+      "entrega": "2022-08-01",
+      "total": 58.8
+    }
+  ],
+  "livros": [
+    {
+      "id": 1,
+      "categoria": 3,
+      "titulo": "Acessibilidade na Web",
+      "slug": "acessibilidade-na-web",
+      "descricao": "Boas práticas para construir sites e aplicações acessíveis",
+      "isbn": "978-65-86110-10-4",
+      "numeroPaginas": 246,
+      "publicacao": "2020-04-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/acessibilidade.png",
+      "autor": 1,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Acessibilidade na Web consiste na eliminação de barreiras de acesso em páginas e aplicações digitais para que pessoas com deficiência tenham autonomia na rede. Na verdade, acessibilidade na web beneficia todas as pessoas. Em algum momento da vida todos podem precisar de acessibilidade, seja devido a uma limitação temporária ou permanente. Quando não levamos em consideração o acesso de pessoas com deficiência, estamos tirando o direito de uma pessoa de navegar, interagir ou consumir produtos e serviços na rede. Empatia é o fator principal para que as aplicações que desenvolvemos sejam inclusivas."
+    },
+    {
+      "id": 2,
+      "categoria": 3,
+      "titulo": "Angular 11 e Firebase",
+      "slug": "angular11-e-firebase",
+      "descricao": "Construindo uma aplicação integrada com a plataforma do Google",
+      "isbn": "978-85-7254-036-0",
+      "numeroPaginas": 163,
+      "publicacao": "2019-11-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/angular.png",
+      "autor": 2,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "No desenvolvimento de aplicações web e mobile, há disponível uma quantidade expressiva de linguagens, frameworks e ferramentas. Nessa imensidão, é comum se questionar ou até ter inseguranças sobre qual o melhor caminho para a construção neste segmento. O Angular é uma plataforma que facilita a construção de aplicativos, combinando templates, injeção de dependências, tudo integrado às melhores práticas de desenvolvimento."
+    },
+    {
+      "id": 3,
+      "categoria": 1,
+      "titulo": "Arquitetura de software distribuído",
+      "slug": "arquitetura-de-software-distribuído",
+      "descricao": "Boas práticas para um mundo de microsserviços",
+      "isbn": "978-65-86110-86-9",
+      "numeroPaginas": 138,
+      "publicacao": "2021-10-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/arquitetura.png",
+      "autor": 3,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Com constantes evoluções, adições de novas funcionalidades e integrações com outros sistemas, os softwares têm se tornado cada vez mais complexos, mais difíceis de serem entendidos. Dessa forma, fazer com que os custos de manutenção desses softwares não ultrapassem o valor que eles entregam às companhias é um desafio para a arquiteta ou arquiteto de software."
+    },
+    {
+      "id": 4,
+      "categoria": 3,
+      "titulo": "Bootstrap 4",
+      "slug": "bootstrap-4",
+      "descricao": "Conheça a biblioteca front-end mais utilizada no mundo",
+      "isbn": "978-85-94188-60-1",
+      "numeroPaginas": 172,
+      "publicacao": "2018-05-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/bootstrap4.png",
+      "autor": 4,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Fazer um site elegante nunca foi tão fácil, mesmo para quem não sabe escrever uma linha de CSS e, muito menos, entende como harmonizar cores, balancear elementos e tipografia. O Bootstrap é, resumidamente, um grande arquivo CSS com uma excelente documentação, que possui dezenas e dezenas de componentes prontos. No começo, foi criado pelo Twitter para servir como um guia de estilos em CSS da empresa; hoje, é a biblioteca mais famosa e utilizada no mundo."
+    },
+    {
+      "id": 5,
+      "categoria": 3,
+      "titulo": "Cangaceiro JavaScript",
+      "slug": "cangaceiro-javascript",
+      "descricao": "Uma aventura no sertão da programação",
+      "isbn": "978-85-94188-00-7",
+      "numeroPaginas": 502,
+      "publicacao": "2017-08-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/cangaceirojavascript.png",
+      "autor": 5,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Talvez nenhuma outra linguagem tenha conseguido invadir o coletivo imaginário dos desenvolvedores como JavaScript fez. Em sua história fabular em busca de identidade, foi a única que conseguiu se enraizar nos navegadores, tornando-se uma linguagem em que todo desenvolvedor precisa ter algum nível de conhecimento."
+    },
+    {
+      "id": 6,
+      "categoria": 3,
+      "titulo": "CSS Eficiente",
+      "slug": "css-eficiente",
+      "descricao": "Técnicas e ferramentas que fazem a diferença nos seus estilos",
+      "isbn": "978-85-5519-076-6",
+      "numeroPaginas": 144,
+      "publicacao": "2015-06-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/css.png",
+      "autor": 6,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Quando aprendemos a trabalhar com CSS, frequentemente nos pegamos perdidos em detalhes fundamentais que não nos são explicados. Por vezes, alguns desses detalhes passam despercebidos até pelo desenvolvedor front-end mais experiente. Mas como ir além do conhecimento básico do CSS e preparar o caminho para explorar tópicos mais avançados?"
+    },
+    {
+      "id": 7,
+      "categoria": 3,
+      "titulo": "Introdução à Web Semântica",
+      "slug": "introducao-a-web-semantica",
+      "descricao": "A inteligência da informação",
+      "isbn": "978-85-94188-06-9",
+      "numeroPaginas": 170,
+      "publicacao": "2017-09-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/websemantica.png",
+      "autor": 7,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Por que precisamos da Web Semântica? A Web de hoje não é suficiente? Estamos caminhando para uma Web com dados cada vez mais relacionados e abertos. A Web Semântica é uma extensão da nossa web atual, em que nós não vamos apenas ler e produzir conteúdo, mas usar as máquinas para relacionar e reutilizar essas informações da melhor maneira possível. Ela se baseia na ideia de que o conteúdo deve ter uma descrição digital, padronizada por vocabulários, que provê meios para as máquinas entenderem do que aquilo se trata, de modo que os computadores possam interpretar, gerar e distribuir conteúdo útil, de acordo com as necessidades dos usuários."
+    },
+    {
+      "id": 8,
+      "categoria": 1,
+      "titulo": "Apache Kafka e Spring Boot",
+      "slug": "apache-kafka-e-spring-boot",
+      "descricao": "Comunicação assíncrona entre microsserviços",
+      "isbn": "978-65-86110-98-2",
+      "numeroPaginas": 189,
+      "publicacao": "2022-01-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/kafka.png",
+      "autor": 8,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Pensar em comunicação assíncrona entre microsserviços é um caminho interessante quando a aplicação demanda serviços que podem demorar para responder. Para evitar problemas de timeouts e retentativas, utilizam-se filas ou tópicos, aos quais um processo adiciona uma mensagem informando o processamento a ser feito e outro a recebe quando estiver disponível e executa. O Kafka é atualmente um dos principais sistemas para a implementação de processamento assíncrono. Além de disponibilizar os tópicos para a produção e consumo de mensagens, suas diversas funcionalidades facilitam a implementação de nossas aplicações, com a distribuição e o balanceamento de carga entre os consumidores e o processamento de fluxos de dados."
+    },
+    {
+      "id": 9,
+      "categoria": 1,
+      "titulo": "Construindo APIs REST com Node.js",
+      "slug": "construindo-apis-rest-com-nodejs",
+      "descricao": "",
+      "isbn": "978-85-5519-150-3",
+      "numeroPaginas": 187,
+      "publicacao": "2016-01-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/node.png",
+      "autor": 9,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Hoje em dia, é muito comum criar aplicações client-side para web e mobile que consomem dados de uma API (Application Programming Interface), que são sistemas back-end focados apenas no processamento e envio de dados, de forma centralizada. Isso permite que sejam desenvolvidas múltiplas aplicações clientes com interfaces específicas para usuários mobile, desktop ou web. Desde 2010, o Node.js provou ser uma excelente plataforma escalável na solução de diversos problemas, principalmente para construção de APIs RESTful."
+    },
+    {
+      "id": 10,
+      "categoria": 3,
+      "titulo": "Guia prático de TypeScript",
+      "slug": "guia-pratico-de-typescript",
+      "descricao": "Melhore suas aplicações JavaScript",
+      "isbn": "978-65-86110-77-7",
+      "numeroPaginas": 178,
+      "publicacao": "2021-07-01",
+      "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/typescript.png",
+      "autor": 10,
+      "opcoesCompra": [
+        {
+          "id": 1,
+          "titulo": "E-book",
+          "preco": 29.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Impresso",
+          "preco": 39.9
+        },
+        {
+          "id": 3,
+          "titulo": "E-book + Impresso",
+          "preco": 59.9,
+          "formatos": [
+            ".pdf",
+            ".pub",
+            ".mob"
+          ]
+        }
+      ],
+      "sobre": "Desenvolvido e mantido pela Microsoft, o TypeScript é um pré-processador open source de códigos JavaScript que auxilia na escrita de códigos, desde os mais simples até os mais complexos, utilizando tipagem de dados e os princípios da Orientação a Objetos para o desenvolvimento de aplicações front-end, back-end e mobile."
+    }
+  ],
+  "autores": [
+    {
+      "id": 1,
+      "nome": "Reinaldo Ferraz",
+      "sobre": "Formado em desenho e computação gráfica e pós-graduado em design de hipermídia pela Universidade Anhembi Morumbi em São Paulo. Trabalha com desenvolvimento web desde 1998. Coordena as iniciativas de acessibilidade na Web do NIC.br e projetos relacionados a Open Web Platform, Digital Publishing e Web das Coisas. Representante do NIC.br em grupos de trabalho do W3C internacional em Acessibilidade na Web, Digital Publishing e Web das Coisas. Apaixonado por acessibilidade, usabilidade, padrões web, HTML, CSS e café sem açúcar."
+    },
+    {
+      "id": 2,
+      "nome": "Kheronn Khennedy Machado",
+      "sobre": "Kheronn Khennedy Machado é professor da rede pública estadual do Paraná. Atua na formação de professores para uso de tecnologia em sala de aula. Desenvolve desde 2007 aplicações para web e mobile, tendo recentemente focado em soluções que utilizam Javascript. Possui Mestrado em Informática pela UFPR e Graduação em Processamento de Dados pela Fatec Ourinhos."
+    },
+    {
+      "id": 3,
+      "nome": "Flávio Lisboa",
+      "sobre": "Flávio Gomes da Silva Lisboa é bacharel em Ciência da Computação, especialista em tecnologia Java, certificado como engenheiro e arquiteto em PHP e Zend Framework e mestrando em Tecnologia e Sociedade. Tem experiência como programador e como gestor de projeto de software. É professor de disciplinas de programação orientada a objetos, testes unitários e frameworks de desenvolvimento. Tem seis livros publicados sobre programação na linguagem PHP e dez anos de experiência em treinamento para desenvolvedores de software. Foi keynote speaker na PHP Conference Brasil e palestrante e instrutor em diversos eventos de software. Trabalha como analista no Serviço Federal de Processamento de Dados e é contribuidor do projeto Nextcloud. É fã de histórias em quadrinhos, escreveu a hexalogia Rom, Biografia Não Autorizada e mantém o blog romocavaleirodoespaco.blogspot.com"
+    },
+    {
+      "id": 4,
+      "nome": "Natan Souza",
+      "sobre": "Natan Souza é front-end designer no grupo Caelum desde 2015, e instrutor dos cursos presenciais de front-end e UX. Além disso, também produz cursos online dessas áreas para a Alura, incluindo os cursos de Sass e LESS. Começou a dar seus primeiros cliques no Photoshop ainda em 2005, o que o levaria a se interessar pela área de Design, e graduando-se bacharel em Design Digital anos mais tarde. Está focado na área de web e UX desde 2009, passando por empresas como FIAP e PMESP. Atuou como front-end e designer em toda a sua trajetória profissional. Twitter: @designernatan | LinkedIn do Natan | Site http://www.designernatan.com.br"
+    },
+    {
+      "id": 5,
+      "nome": "Flávio Almeida",
+      "sobre": "Flávio Almeida é desenvolvedor e instrutor na Caelum. Possui mais de 14 anos de experiência na área de desenvolvimento com ampla atuação em segmentos da indústria de shopping centers e varejo. Bacharel em Informática com MBA em Gestão de Negócios em TI, possui Psicologia como segunda graduação e procura aplicar o que aprendeu no desenvolvimento de software e na educação. Trabalha com a plataforma Java desde 2004, mas, atualmente, tem focado na plataforma Node.js e na linguagem JavaScript, tentando aproximar ainda mais front-end e back-end. Participou das edições 2013 e 2014 da MobileConf e costuma contribuir com o Blog da Caelum sobre os mais diversos assuntos. Elabora treinamentos para a plataforma online Alura, atividade que vem se tornando cada vez mais prazerosa. Possui uma conta no Twitter e outra no GitHub."
+    },
+    {
+      "id": 6,
+      "nome": "Tárcio Zemel",
+      "sobre": "Tárcio Zemel trabalha com desenvolvimento web há 15 anos e atuar nessa área é uma das coisas que mais gosta de fazer. É sócio-fundador da empresa webfatorial, na qual trabalha em projetos web para grandes marcas do mundo todo."
+    },
+    {
+      "id": 7,
+      "nome": "Diego Eis",
+      "sobre": "Diego Eis é apaixonado e sempre trabalhou com internet. Em 2003, fundou o Tableless, onde escreve com vários outros autores sobre desenvolvimento web e front-end. Já palestrou em vários eventos nacionais de tecnologia, faculdades e empresas por todo o país, passou seis anos de sua carreira profissional dirigindo a própria empresa, fazendo projetos para companhias como Globo.com, Itaú, Nokia, Samsung e outras. É autor do livro Guia Front-End, destinado aos iniciantes da área. Atualmente, é gestor de produtos na Easynvest."
+    },
+    {
+      "id": 8,
+      "nome": "Eduardo Felipe Zambom Santana",
+      "sobre": "Eduardo Felipe Zambom Santana tem mais de 15 anos de experiência em Engenharia de Software. Trabalha principalmente como Java, já tendo trabalhado com os principais frameworks da linguagem como Struts, JSF e Spring. Também tem bastante experiência em outras linguagens como Python e Erlang. Formou-se em Ciência da Computação na UFSCar (2007), fez mestrado também na UFSCar (2010) e doutorado na USP (2019) trabalhando na área de sistemas distribuídos."
+    },
+    {
+      "id": 9,
+      "nome": "Caio Ribeiro Pereira",
+      "sobre": "Caio Ribeiro Pereira é desenvolvedor desde 2008, já brincou muito com Java, PHP, Ruby e atualmente brinca muito com tudo que envolve JavaScript, React, React Native e Node.js! Bacharel em Sistemas de Informação pela Universidade Católica de Santos, nos tempos livres escreve alguns post no seu blog Underground WebDev (udgwebdev.com), de vez em quando contribui no open-source em projetos como Moment.js, Sequelize.js, VanillaMasker, DevFreeBooks e outros em seu GitHub (github.com/caio-ribeiro-pereira), também é admin do Facebook Groups JavaScript - Brazil e atualmente é founder da WatchCoins (watchcoins.net) uma plataforma para acompanhar o mercado de bitcoin e outras criptomoedas. Para saber mais sobre ele, acesse: crpwebdev.github.io"
+    },
+    {
+      "id": 10,
+      "nome": "Thiago da Silva Adriano",
+      "sobre": "Thiago da Silva Adriano é Microsoft (MVP) e atualmente trabalha como Engenheiro de Software. Nesses últimos anos, focou nas tecnologias criadas pela Microsoft, mas sempre esteve antenado para as novas tecnologias que estão surgindo no mercado. Em um breve resumo, é uma pessoa apaixonada pelo que faz, tem a sua profissão como hobby."
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Programação",
+      "slug": "programacao"
+    },
+    {
+      "id": 2,
+      "nome": "Mobile",
+      "slug": "mobile"
+    },
+    {
+      "id": 3,
+      "nome": "Front-end",
+      "slug": "frontend"
+    },
+    {
+      "id": 4,
+      "nome": "Infraestrutura",
+      "slug": "infraestrutura"
+    },
+    {
+      "id": 5,
+      "nome": "Business",
+      "slug": "business"
+    },
+    {
+      "id": 6,
+      "nome": "Design e UX",
+      "slug": "design-e-ux"
+    }
+  ]
+}

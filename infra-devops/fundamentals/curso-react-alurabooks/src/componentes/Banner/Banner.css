@@ -1,0 +1,16 @@
+.banner-principal {
+    padding: 80px 0;
+    text-align: center;
+    color: #FFF;
+}
+.banner-principal h2 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.banner-principal h3 {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 16px;
+}

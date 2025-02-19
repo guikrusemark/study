@@ -1,0 +1,21 @@
+.Newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0;
+    color: #002F52;
+}
+
+.Newsletter h6 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.Newsletter p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;    
+    max-width: 380px;
+}

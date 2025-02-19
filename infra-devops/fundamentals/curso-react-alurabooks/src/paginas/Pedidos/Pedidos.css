@@ -1,0 +1,15 @@
+.pedidos {
+    padding: 32px;
+}
+
+.pedidos h1 {
+    margin-top: 0;
+}
+
+.pedidos .pedido {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #002F52;
+    padding: 12px;
+}

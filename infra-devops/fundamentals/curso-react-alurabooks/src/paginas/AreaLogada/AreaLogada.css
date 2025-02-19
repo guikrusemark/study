@@ -1,0 +1,30 @@
+.AreaLogada {
+    display: flex;
+    width: 900px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.AreaLogada__titulo {
+    padding: 32px 0;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #FFF;
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+}
+
+.AreaLogada .navegacao li {
+    padding: 12px 36px;
+    text-align: center;
+    border-bottom: 1px solid #0E3E61;
+    font-size: 16px;
+}
+.AreaLogada .navegacao li a {
+    text-decoration: none;
+    color: #002F52;
+}
+
+.AreaLogada .conteudo {
+    flex-grow: 1;
+}

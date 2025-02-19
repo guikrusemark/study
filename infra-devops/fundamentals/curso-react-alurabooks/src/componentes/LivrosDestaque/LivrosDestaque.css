@@ -1,0 +1,79 @@
+.LivrosDestaque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EBECEE;
+    padding: 48px 0;
+}
+
+.LivrosDestaque ul.livros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LivrosDestaque ul.livros li {
+    margin: 0 12px;
+}
+
+.LivrosDestaque ul.livros li img {
+    width: 120px;
+    cursor: pointer;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+.LivrosDestaque ul.livros li.selecionado img {
+    width: 180px;
+}
+
+.LivrosDestaque .selecionado-detalhes {
+    width: 350px;
+    max-width: 100%;
+}
+.LivrosDestaque .selecionado-detalhes h5 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #EB9B00;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.LivrosDestaque .selecionado-detalhes h6 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #002F52;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.LivrosDestaque .selecionado-detalhes p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.LivrosDestaque .selecionado-detalhes footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.LivrosDestaque .selecionado-detalhes .preco em {
+    display: block;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 21px;
+}
+
+.LivrosDestaque .selecionado-detalhes .preco strong {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #002F52;
+}

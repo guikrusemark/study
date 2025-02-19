@@ -1,0 +1,24 @@
+.TagsCategorias {
+    padding: 64px 0;
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);;
+}
+
+.TagsCategorias h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.TagsCategorias .container {
+    width: 900px;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px;
+}
