@@ -133,3 +133,7 @@ poetry.lock
 # Ruff
 .ruff/
 .ruff_cache/
+
+db.sqlite
+uv.lock
+.venv
