@@ -1,11 +1,7 @@
-from app.config.db import SessionLocal
-from app.model.user import get_users
+import asyncio
+
+from test.test_mongodb import main
 
 
 if __name__ == "__main__":
-    db = SessionLocal()
-
-    users = get_users(db)
-
-    for user in users:
-        print(user.to_dict())
+    asyncio.run(main())

@@ -2,9 +2,21 @@ from typing import Any, List
 
 from fastapi import HTTPException, status
 from sqlalchemy import ForeignKey, select
-from sqlalchemy.orm import Mapped, mapped_column, relationship, Session
+from sqlalchemy.orm import (
+    Mapped,
+    Session,
+    mapped_column,
+    relationship,
+)
 
-from app.config.db import Base, b_uuid7, str_sm, str_uuid, uuid_fk, uuid_pk
+from app.config.db import (
+    Base,
+    b_uuid7,
+    str_sm,
+    str_uuid,
+    uuid_fk,
+    uuid_pk,
+)
 
 
 class User(Base):
