@@ -1,0 +1,43 @@
+# version: '3.9'
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: my_postgres
+    # restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # networks:
+    #   - my_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: my_redis
+    # restart: always
+    ports:
+      - "${REDIS_PORT}:6379"
+    volumes:
+      - redisdata:/data
+    # networks:
+    #   - my_network
+    # command: redis-server --requirepass $${REDIS_PASSWORD}  # Use $$ to escape $
+
+volumes:
+  pgdata:
+  redisdata:
+
+
+# networks:
+#   my_network:
+#     driver: bridge
