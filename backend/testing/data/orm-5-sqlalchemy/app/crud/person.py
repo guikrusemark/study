@@ -9,7 +9,7 @@ from typing import (
 from fastapi import HTTPException, status
 from pymongo import ReturnDocument
 
-from app.config.mongodb import get_collection  # type: ignore
+from app.core.mongodb import get_collection  # type: ignore
 from app.model.person import Person
 
 COLLECTION_NAME = "persons"

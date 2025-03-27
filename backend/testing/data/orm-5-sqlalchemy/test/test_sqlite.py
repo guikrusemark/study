@@ -1,4 +1,4 @@
-from app.config.db import SessionLocal
+from app.core.db import SessionLocal
 from app.model.user import get_users
 
 

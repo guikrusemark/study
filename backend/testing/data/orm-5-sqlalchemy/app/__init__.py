@@ -13,7 +13,7 @@ from fastapi import (
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.config.db import get_db
+from app.core.db import get_db
 from app.crud.person import (
     create_person,
     delete_person,

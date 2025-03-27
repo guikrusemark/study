@@ -9,7 +9,7 @@ from sqlalchemy.orm import (
     relationship,
 )
 
-from app.config.db import (
+from app.core.db import (
     Base,
     b_uuid7,
     str_sm,
