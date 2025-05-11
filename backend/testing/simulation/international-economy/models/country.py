@@ -19,8 +19,8 @@ class Country():
     def debt_over_gdp(self):
         return self._national_debt / self._gdp
     
-    def lend_for(self, borrower: Country, amount: float):
-        
+    def lend_for(self, borrower: "Country", amount: float):
+        pass
         
     def __str__(self):
         return f'{self._name} - Debt of {(self.debt_over_gdp() * 100):.2f}%'
