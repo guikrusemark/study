@@ -66,7 +66,7 @@ export async function createUser(userData: User) {
 
 		return {
 			success: true,
-			userId: result.insertedId,
+			userId: result.insertedId.toString(),
 			message: "User created successfully",
 		};
 	} catch (error) {

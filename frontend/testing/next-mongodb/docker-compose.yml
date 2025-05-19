@@ -17,18 +17,17 @@ services:
   #     - my_network
   #   command: server /data --console-address ":9001"
 
-  mongodb:
-    image: bitnami/mongodb:8.0
-    container_name: my_mongodb
+  mongo:
+    image: mongo:8
+    container_name: my_mongo
     environment:
-      MONGODB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
-      MONGODB_USERNAME: ${MONGODB_USERNAME}
-      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
-      MONGODB_DATABASE: ${MONGODB_DATABASE}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
     ports:
       - "${MONGODB_PORT}:27017"
     volumes:
-      - mongodb_data:/bitnami/mongodb
+      - mongo_data:/data/db
     networks:
       - my_network
 
@@ -46,7 +45,7 @@ services:
   
 volumes:
   # minio_data:
-  mongodb_data:
+  mongo_data:
   # redis_data:
 
 
