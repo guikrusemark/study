@@ -1,3 +1,4 @@
+import UserForm from "@/components/UserForm";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
 			<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
 				<Card>
 					<CardTitle className="text-center">Teste</CardTitle>
-					<CardContent>Testando</CardContent>
+					<CardContent>
+						<UserForm />
+					</CardContent>
 				</Card>
 			</main>
 		</div>
