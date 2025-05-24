@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -14,9 +15,6 @@ export default function Home() {
 						</Link>
 						<Link href="/adicionar">
 							<Button className="cursor-pointer w-full">Adicionar</Button>
-						</Link>
-						<Link href={"/remover"}>
-							<Button className="cursor-pointer w-full">Remover</Button>
 						</Link>
 					</CardContent>
 				</Card>

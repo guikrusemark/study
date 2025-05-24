@@ -31,22 +31,22 @@ services:
     networks:
       - my_network
 
-  # redis:
-  #   image: redis:7
-  #   container_name: my_redis
-  #   # restart: always
-  #   ports:
-  #     - "${REDIS_PORT}:6379"
-  #   volumes:
-  #     - redis_data:/data
-  #   networks:
-  #     - my_network
-  #   # command: redis-server --requirepass $${REDIS_PASSWORD}  # Use $$ to escape $
+  redis:
+    image: redis:7
+    container_name: my_redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - my_network
+    command: redis-server --appendonly yes
   
 volumes:
   # minio_data:
   mongo_data:
-  # redis_data:
+  redis_data:
 
 
 networks:

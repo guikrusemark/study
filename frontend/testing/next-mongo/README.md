@@ -20,6 +20,76 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Features
+
+- **Next.js 15** with App Router
+- **MongoDB** integration with connection pooling
+- **Redis** caching for improved performance
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Shadcn/ui** components
+- **Form validation** with Zod and React Hook Form
+
+## Environment Setup
+
+Copy `.env.example` to `.env.local` and configure your environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+### Required Environment Variables
+
+```env
+# MongoDB Configuration
+MONGODB_USERNAME=your_username
+MONGODB_PASSWORD=your_password
+MONGODB_DATABASE=your_database
+
+# Redis Configuration (choose one option)
+# Option 1: Redis URL (recommended)
+REDIS_URL=redis://localhost:6379
+
+# Option 2: Individual parameters
+REDIS_HOST=localhost
+REDIS_PORT=6379
+```
+
+## Development with Docker
+
+Start MongoDB and Redis services:
+
+```bash
+docker-compose up -d
+```
+
+## Redis Caching
+
+This application implements Redis caching for MongoDB queries with the following features:
+
+### Cache Strategy
+- **User list**: Cached for 5 minutes with `users` tag
+- **Individual users**: Cached for 10 minutes with `users` and `user:{id}` tags
+- **Automatic invalidation**: Cache is cleared when users are created, updated, or deleted
+
+### Cache Management
+- Visit `/cache` to monitor Redis health and statistics
+- Manual cache invalidation by tags
+- Cache performance metrics
+
+### Cache Functions
+```typescript
+// Get with automatic fallback to database
+const users = await getCachedWithFallback(
+  "users:all",
+  () => fetchUsersFromDB(),
+  { ttl: 300, tags: ["users"] }
+);
+
+// Invalidate by tag
+await invalidateByTag("users");
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

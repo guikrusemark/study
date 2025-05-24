@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 
+import { createUser } from "@/actions/user";
+
 import { type userInput, userSchema } from "@/schemas/user";
 
-import { createUser } from "@/actions/user";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 export default function UserForm() {
@@ -54,35 +56,53 @@ export default function UserForm() {
 	};
 
 	return (
-		<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-			<Input
-				name="name"
-				value={formData.name}
-				onChange={handleChange}
-				placeholder="Name"
-			/>
-			{errors.name && <p>{errors.name}</p>}
-
-			<Input
-				name="email"
-				value={formData.email}
-				onChange={handleChange}
-				placeholder="Email"
-			/>
-			{errors.email && <p>{errors.email}</p>}
-
-			<Input
-				name="password"
-				type="password"
-				value={formData.password}
-				onChange={handleChange}
-				placeholder="Password"
-			/>
-			{errors.password && <p>{errors.password}</p>}
-
-			<Button className="cursor-pointer" type="submit">
-				Register
-			</Button>
-		</form>
+		<Card className="w-full max-w-md mx-auto">
+			<CardHeader>
+				<CardTitle className="text-lg font-semibold text-center">
+					Adicionar Usuário
+				</CardTitle>
+			</CardHeader>
+			<CardContent>
+				<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+					<div className="flex flex-col space-y-1">
+						<Input
+							name="name"
+							value={formData.name}
+							onChange={handleChange}
+							placeholder="Nome"
+						/>
+						{errors.name && (
+							<span className="text-xs text-red-500">{errors.name}</span>
+						)}
+					</div>
+					<div className="flex flex-col space-y-1">
+						<Input
+							name="email"
+							value={formData.email}
+							onChange={handleChange}
+							placeholder="Email"
+						/>
+						{errors.email && (
+							<span className="text-xs text-red-500">{errors.email}</span>
+						)}
+					</div>
+					<div className="flex flex-col space-y-1">
+						<Input
+							name="password"
+							type="password"
+							value={formData.password}
+							onChange={handleChange}
+							placeholder="Senha"
+						/>
+						{errors.password && (
+							<span className="text-xs text-red-500">{errors.password}</span>
+						)}
+					</div>
+					<Button className="cursor-pointer w-full" type="submit">
+						Registrar
+					</Button>
+				</form>
+			</CardContent>
+		</Card>
 	);
 }

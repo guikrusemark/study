@@ -1,45 +1,50 @@
 "use server";
 
 import bcrypt from "bcryptjs";
-
-import clientPromise from "@/lib/mongo";
-import { userSchema } from "@/schemas/user";
-import type { User } from "@/types/user";
 import { ObjectId } from "mongodb";
 
+import clientPromise from "@/lib/mongo";
+import { getCachedWithFallback, invalidateByTag } from "@/lib/redis";
+
+import { userSchema } from "@/schemas/user";
+import type { User } from "@/types/user";
+
 export async function listUsers() {
-	try {
-		const client = await clientPromise;
-		const db = client.db();
-		const users = await db
-			.collection("users")
-			.find({}, { projection: { password: 0 } })
-			.toArray();
+	return await getCachedWithFallback(
+		"users:all",
+		async () => {
+			const client = await clientPromise;
+			const db = client.db();
+			const users = await db
+				.collection("users")
+				.find({}, { projection: { password: 0 } })
+				.toArray();
 
-		if (!users) return { error: "No users found" };
-
-		return users;
-	} catch (error) {
-		console.error("Error fetching users:", error);
-		return { error: "Internal server error" };
-	}
+			if (!users) throw new Error("No users found");
+			return users;
+		},
+		{ ttl: 300, tags: ["users"] }, // 5 minutes TTL with "users" tag
+	);
 }
 
 export async function getUserById(userId: string) {
-	try {
-		const client = await clientPromise;
-		const db = client.db();
-		const user = await db
-			.collection("users")
-			.findOne({ _id: new ObjectId(userId) }, { projection: { password: 0 } });
+	return await getCachedWithFallback(
+		`user:${userId}`,
+		async () => {
+			const client = await clientPromise;
+			const db = client.db();
+			const user = await db
+				.collection("users")
+				.findOne(
+					{ _id: new ObjectId(userId) },
+					{ projection: { password: 0 } },
+				);
 
-		if (!user) return { error: "User not found" };
-
-		return user;
-	} catch (error) {
-		console.error("Error fetching user:", error);
-		return { error: "Internal server error" };
-	}
+			if (!user) throw new Error("User not found");
+			return user;
+		},
+		{ ttl: 600, tags: ["users", `user:${userId}`] }, // 10 minutes TTL
+	);
 }
 
 export async function createUser(userData: User) {
@@ -63,6 +68,9 @@ export async function createUser(userData: User) {
 			password: hashedPassword,
 			createdAt: new Date(),
 		});
+
+		// Invalidate users cache after creating a new user
+		await invalidateByTag("users");
 
 		return {
 			success: true,
@@ -101,6 +109,10 @@ export async function updateUser(userId: string, data: unknown) {
 
 		if (result.matchedCount === 0) return { error: "User not found" };
 
+		// Invalidate caches after updating user
+		await invalidateByTag("users");
+		await invalidateByTag(`user:${userId}`);
+
 		return {
 			success: true,
 			message: "User updated successfully",
@@ -120,6 +132,10 @@ export async function deleteUser(userId: string) {
 		});
 
 		if (result.deletedCount === 0) return { error: "User not found" };
+
+		// Invalidate caches after deleting user
+		await invalidateByTag("users");
+		await invalidateByTag(`user:${userId}`);
 
 		return { success: true, message: "User deleted successfully" };
 	} catch (error) {
