@@ -3,7 +3,9 @@ import { z } from "zod";
 
 export const userSchema = z.object({
 	email: z.string().email(),
-	name: z.string().min(1),
+	name: z.string().refine((val) => val.trim().length > 0, {
+		message: "Name cannot be empty or whitespace only",
+	}),
 	password: z.string().min(1),
 });
 

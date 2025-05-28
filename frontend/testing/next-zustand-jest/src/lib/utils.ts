@@ -6,5 +6,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function capitalize(str: string) {
-	return str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+	return str
+		.toLowerCase()
+		.replace(
+			/(^|[\s\-_])([a-záàâãéèêíìîóòôõúùûç])/gi,
+			(match, separator, char) => separator + char.toUpperCase(),
+		);
 }

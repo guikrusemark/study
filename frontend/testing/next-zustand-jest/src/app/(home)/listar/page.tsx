@@ -19,7 +19,7 @@ export default async function ListarPage() {
 					<Card>
 						<CardTitle className="text-center text-red-600">Erro</CardTitle>
 						<CardContent>
-							<p className="text-center">{result.error}</p>
+							<p className="text-center">ERRO</p>
 						</CardContent>
 					</Card>
 					<Link className="w-full" href={"/"}>
