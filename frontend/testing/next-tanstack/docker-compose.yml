@@ -1,0 +1,54 @@
+# version: '3.9'
+
+services:
+
+  # minio:
+  #   image: minio/minio:latest
+  #   container_name: my_minio
+  #   environment:
+  #     MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+  #     MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+  #   ports:
+  #     - "9000:9000"  # API Access
+  #     - "9001:9001"  # Web UI
+  #   volumes:
+  #     - minio_data:/data
+  #   networks:
+  #     - my_network
+  #   command: server /data --console-address ":9001"
+
+  mongo:
+    image: mongo:8
+    container_name: my_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+    ports:
+      - "${MONGODB_PORT}:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - my_network
+
+  redis:
+    image: redis:7
+    container_name: my_redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - my_network
+    command: redis-server --appendonly yes
+  
+volumes:
+  # minio_data:
+  mongo_data:
+  redis_data:
+
+
+networks:
+  my_network:
+    driver: bridge
