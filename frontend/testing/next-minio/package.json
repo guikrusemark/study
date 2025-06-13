@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker-compose up -d && next dev",
+    "dev": "docker-compose up -d && NODE_OPTIONS='--inspect' next dev",
     "dev:turbo": "docker-compose up -d && next dev --turbopack",
     "down": "docker-compose down",
     "build": "next build",
