@@ -39,30 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Terraform files
-*.tfstate
-*.tfstate.*
-*.tfplan
-*.tfvars
-!terraform.tfvars.example
-
-# Terraform directories
-.terraform/
-.terraform.lock.hcl
-
-# API response files
-neon_project.json
-neon_project_id.txt
-upstash_redis.json
-upstash_redis_id.txt
-upstash_redis_details.json
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-
-bun.lock
