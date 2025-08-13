@@ -1,0 +1,43 @@
+{
+  "name": "next-minio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "init": "docker-compose up -d && NODE_OPTIONS='--inspect' && next dev",
+    "dev": "next dev",
+    "dev:turbo": "docker-compose up -d && next dev --turbopack",
+    "down": "docker-compose down",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "biome": "bunx biome check --write ./src/"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.826.0",
+    "@aws-sdk/s3-request-presigner": "^3.826.0",
+    "@hookform/resolvers": "^5.1.0",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto": "^1.0.1",
+    "lucide-react": "^0.513.0",
+    "minio": "^8.0.5",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.57.0",
+    "tailwind-merge": "^3.3.0",
+    "zod": "^3.25.51"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.4",
+    "typescript": "^5"
+  }
+}
