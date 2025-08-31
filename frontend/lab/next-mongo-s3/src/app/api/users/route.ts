@@ -1,13 +1,12 @@
 import bcryptjs from "bcryptjs";
 import { NextResponse } from "next/server";
 
-import clientPromise from "@/lib/mongo";
-import { userSchema } from "@/schemas/user";
+import { UserInputSchema } from "@/lib/schemas/user";
+import { getDb } from "@/lib/services/mongo";
 
 export async function GET(request: Request) {
 	try {
-		const client = await clientPromise;
-		const db = client.db();
+		const db = await getDb();
 		const users = await db
 			.collection("users")
 			.find({}, { projection: { password: 0 } })
@@ -29,7 +28,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
 	try {
 		const body = await request.json();
-		const parsed = userSchema.safeParse(body);
+		const parsed = UserInputSchema.safeParse(body);
 
 		if (!parsed.success) {
 			return NextResponse.json(
@@ -41,8 +40,7 @@ export async function POST(request: Request) {
 		const { email, name, password } = parsed.data;
 		const hashedPassword = await bcryptjs.hash(password, 12);
 
-		const client = await clientPromise;
-		const db = client.db();
+		const db = await getDb();
 
 		const existingUser = await db.collection("users").findOne({ email });
 		if (existingUser) {
@@ -82,8 +80,7 @@ export async function DELETE(request: Request) {
 			);
 		}
 
-		const client = await clientPromise;
-		const db = client.db();
+		const db = await getDb();
 		const result = await db.collection("users").deleteOne({ _id: id });
 
 		if (result.deletedCount === 0) {

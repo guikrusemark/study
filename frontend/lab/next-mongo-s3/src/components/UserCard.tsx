@@ -1,12 +1,11 @@
 import type { HTMLAttributes } from "react";
 
-import { capitalize, cn } from "@/lib/utils";
-import type { User } from "@/types/user";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { UserDb } from "@/lib/schemas/user";
+import { capitalize, cn } from "@/lib/utils";
 
 interface UserCardProps extends HTMLAttributes<HTMLDivElement> {
-	user: User;
+	user: UserDb;
 }
 
 export function UserCard({ user, className, ...props }: UserCardProps) {

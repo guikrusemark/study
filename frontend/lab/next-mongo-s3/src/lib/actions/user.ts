@@ -2,25 +2,21 @@
 
 import bcrypt from "bcryptjs";
 import { ObjectId } from "mongodb";
-
-import clientPromise from "@/lib/mongo";
-import { getCachedWithFallback, invalidateByTag } from "@/lib/redis";
-
-import { userSchema } from "@/schemas/user";
-import type { User } from "@/types/user";
+import { type UserDb, UserDbSchema } from "@/lib/schemas/user";
+import { getDb } from "@/lib/services/mongo";
+import { getCachedWithFallback, invalidateByTag } from "@/lib/services/redis";
 
 export async function listUsers() {
 	return await getCachedWithFallback(
 		"users:all",
 		async () => {
-			const client = await clientPromise;
-			const db = client.db();
+			const db = await getDb();
 			const users = await db
 				.collection("users")
 				.find({}, { projection: { password: 0 } })
 				.toArray();
 
-			if (!users) throw new Error("No users found");
+			if (users.length === 0) throw new Error("No users found");
 			return users;
 		},
 		{ ttl: 300, tags: ["users"] }, // 5 minutes TTL with "users" tag
@@ -31,8 +27,7 @@ export async function getUserById(userId: string) {
 	return await getCachedWithFallback(
 		`user:${userId}`,
 		async () => {
-			const client = await clientPromise;
-			const db = client.db();
+			const db = await getDb();
 			const user = await db
 				.collection("users")
 				.findOne(
@@ -47,17 +42,18 @@ export async function getUserById(userId: string) {
 	);
 }
 
-export async function createUser(userData: User) {
+export async function createUser(userData: UserDb) {
 	try {
-		const parsedUser = userSchema.safeParse(userData);
+		const parsedUser = UserDbSchema.safeParse(userData);
 
 		if (!parsedUser.success) return { error: "Invalid input" };
 
 		const { email, name, password } = parsedUser.data;
-		const hashedPassword = await bcrypt.hash(password, 12);
 
-		const client = await clientPromise;
-		const db = client.db();
+		let hashedPassword = null;
+		if (password) hashedPassword = await bcrypt.hash(password, 12);
+
+		const db = await getDb();
 
 		const existing = await db.collection("users").findOne({ email });
 		if (existing) return { error: "User already exists" };
@@ -85,15 +81,16 @@ export async function createUser(userData: User) {
 
 export async function updateUser(userId: string, data: unknown) {
 	try {
-		const parsed = userSchema.safeParse(data);
+		const parsed = UserDbSchema.safeParse(data);
 
 		if (!parsed.success) return { error: "Invalid input" };
 
 		const { email, name, password } = parsed.data;
-		const hashedPassword = await bcrypt.hash(password, 12);
 
-		const client = await clientPromise;
-		const db = client.db();
+		let hashedPassword = null;
+		if (password) hashedPassword = await bcrypt.hash(password, 12);
+
+		const db = await getDb();
 
 		const result = await db.collection("users").updateOne(
 			{ _id: new ObjectId(userId) },
@@ -125,8 +122,7 @@ export async function updateUser(userId: string, data: unknown) {
 
 export async function deleteUser(userId: string) {
 	try {
-		const client = await clientPromise;
-		const db = client.db();
+		const db = await getDb();
 		const result = await db.collection("users").deleteOne({
 			_id: new ObjectId(userId),
 		});

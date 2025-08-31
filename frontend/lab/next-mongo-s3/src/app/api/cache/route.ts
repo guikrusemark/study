@@ -5,7 +5,7 @@ import {
 	deleteCachePattern,
 	getCacheStats,
 	invalidateByTag,
-} from "@/lib/redis";
+} from "@/lib/services/redis";
 
 export async function GET(request: NextRequest) {
 	const { searchParams } = new URL(request.url);
