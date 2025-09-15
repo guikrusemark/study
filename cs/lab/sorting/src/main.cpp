@@ -1,8 +1,35 @@
+#include <algorithm>
+#include <cassert>
+#include <array>
 #include <iostream>
+#include <string>
 #include <vector>
 
 #include "sorting.hpp"
 
+/**
+ * @brief Prints the contents of a vector of integers.
+ *
+ * @param name The name of the vector to be printed.
+ * @param arr The vector to be printed.
+ */
+void print_vector(const std::string &name, const std::vector<int> &arr) {
+  std::cout << "\n";
+  std::cout << name << ": \n >> [ ";
+  for (size_t i = 0; i < arr.size(); ++i) {
+    std::cout << arr[i];
+    if (i < arr.size() - 1) {
+      std::cout << ", ";
+    }
+  }
+  std::cout << " ]\n";
+}
+
+/**
+ * @brief Main function to test the sorting algorithms.
+ *
+ * @return int The exit code.
+ */
 int main() {
     //------------------------------------------------------------------------
     // Sample data
@@ -11,38 +38,29 @@ int main() {
                              14, 12, 7,  3,  8,  4,  11, 0,  13,
                              -1, -5, 15, 19, 21, 18, 2,  9,  1};
 
-    std::cout << "\n";
-    std::cout << "Original: \n >> [ ";
-    for (int n : nums) std::cout << n << ", ";
-    std::cout << " ]\n";
+    print_vector("Original", nums);
     //------------------------------------------------------------------------
 
     //------------------------------------------------------------------------
-    // Test each algorithm
+    // Test each algorithm and guard that the output is sorted
 
-    std::vector<int> bubble = nums;
-    std::vector<int> insertion = nums;
-    std::vector<int> selection = nums;
+    struct Algorithm {
+        const char *name;
+        void (*sort)(std::vector<int> &);
+    };
 
-    bubble_sort(bubble);
-    insertion_sort(insertion);
-    selection_sort(selection);
-    //------------------------------------------------------------------------
+    const std::array<Algorithm, 3> algorithms{{
+        {"Bubble", bubble_sort},
+        {"Insertion", insertion_sort},
+        {"Selection", selection_sort},
+    }};
 
-    //------------------------------------------------------------------------
-    // Display results
-
-    std::cout << "Bubble: \n >> [ ";
-    for (int n : bubble) std::cout << n << ", ";
-    std::cout << " ]\n";
-
-    std::cout << "Insertion: \n >> [ ";
-    for (int n : insertion) std::cout << n << ", ";
-    std::cout << " ]\n";
-
-    std::cout << "Selection: \n >> [ ";
-    for (int n : selection) std::cout << n << ", ";
-    std::cout << " ]\n";
+    for (const auto &algorithm : algorithms) {
+        std::vector<int> sorted = nums;
+        algorithm.sort(sorted);
+        assert(std::is_sorted(sorted.begin(), sorted.end()));
+        print_vector(algorithm.name, sorted);
+    }
     //------------------------------------------------------------------------
 
     return 0;
