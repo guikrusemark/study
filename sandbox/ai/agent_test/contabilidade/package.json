@@ -1,0 +1,37 @@
+{
+  "name": "contabilidade",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "@auth/core": "^0.40.0",
+    "@auth/mongodb-adapter": "^3.10.0",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.2",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.544.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.3",
+    "next": "15.5.4",
+    "next-auth": "^5.0.0-beta.29",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "recharts": "^3.2.1",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^20.19.18",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  }
+}
