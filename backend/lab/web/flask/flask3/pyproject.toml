@@ -15,3 +15,11 @@ dependencies = [
     "requests>=2.32.5",
     "sqlalchemy>=2.0.43",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+xfail_strict = true
+filterwarnings = [
+  "ignore::DeprecationWarning",
+]

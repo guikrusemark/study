@@ -1,10 +1,11 @@
 """Application configuration."""
+
 from typing import Final
 
 
 class Config:
     """Base configuration."""
-    
+
     SQLALCHEMY_DATABASE_URI: Final[str] = "sqlite:///app.db"
     SQLALCHEMY_TRACK_MODIFICATIONS: Final[bool] = False
     REDIS_HOST: Final[str] = "localhost"
@@ -15,20 +16,19 @@ class Config:
 
 class DevelopmentConfig(Config):
     """Development configuration."""
-    
+
     DEBUG: Final[bool] = True
 
 
 class TestingConfig(Config):
     """Testing configuration."""
-    
+
     TESTING: Final[bool] = True
-    SQLALCHEMY_DATABASE_URI: str = "sqlite:///:memory:"
 
 
 class ProductionConfig(Config):
     """Production configuration."""
-    
+
     DEBUG: Final[bool] = False
 
 

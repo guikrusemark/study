@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Start the Flask development server."""
+
 from src.app import create_app
 
 if __name__ == "__main__":
