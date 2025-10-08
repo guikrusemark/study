@@ -1,6 +1,9 @@
-# tests/test_smoke.py
+# ruff: noqa: F401
+# pyright: reportUnusedImport=false
+
+
 def test_smoke_imports():
-    import flask  # pyright: ignore[reportUnusedImport] # noqa: F401
-    import sqlalchemy  # pyright: ignore[reportUnusedImport] # noqa: F401
+    import flask
+    import sqlalchemy
 
     assert True

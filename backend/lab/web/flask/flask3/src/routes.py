@@ -1,3 +1,5 @@
+# pyright: reportUnusedFunction=false
+
 """API routes."""
 
 from typing import Any, List
