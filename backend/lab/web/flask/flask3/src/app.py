@@ -1,13 +1,15 @@
 """Flask application factory."""
 
+# pyright: reportUnusedFunction=false
+
 from typing import Any
 
 from flask import Flask
 
-from src.config import config_by_name, Config
+from src.cache import RedisCache, create_cache
+from src.config import Config, config_by_name
+from src.dal import PersonDAL, UserDAL
 from src.models import db
-from src.cache import create_cache, RedisCache
-from src.dal import UserDAL, PersonDAL
 from src.routes import init_routes
 
 

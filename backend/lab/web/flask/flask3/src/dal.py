@@ -1,6 +1,6 @@
 """Data Access Layer for database operations."""
 
-from typing import Optional, List, Type, TypeVar, Generic
+from typing import Optional, List, Type, TypeVar, Generic, cast
 
 from sqlalchemy import select
 
@@ -112,7 +112,7 @@ class BaseDAL(
             return None
 
         response: ResponseSchemaType = response_model.model_validate(obj)
-        self.cache.set(self._get_cache_key(id), response)
+        self.cache.set(self._get_cache_key(response.id), response)
 
         return response
 
@@ -176,7 +176,7 @@ class BaseDAL(
         self.cache.delete(self._get_list_cache_key())
 
         response: ResponseSchemaType = response_model.model_validate(obj)
-        self.cache.set(self._get_cache_key(id), response)
+        self.cache.set(self._get_cache_key(response.id), response)
 
         return response
 
@@ -229,7 +229,7 @@ class UserDAL(BaseDAL[User, UserCreate, UserUpdate, UserResponse]):
         if obj is None:
             return None
 
-        return UserResponse.model_validate(obj)
+        return cast(UserResponse, UserResponse.model_validate(obj))
 
     def get_by_email(self, email: str) -> Optional[UserResponse]:
         """Get user by email.
@@ -246,7 +246,7 @@ class UserDAL(BaseDAL[User, UserCreate, UserUpdate, UserResponse]):
         if obj is None:
             return None
 
-        return UserResponse.model_validate(obj)
+        return cast(UserResponse, UserResponse.model_validate(obj))
 
 
 class PersonDAL(BaseDAL[Person, PersonCreate, PersonUpdate, PersonResponse]):

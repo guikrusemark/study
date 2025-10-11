@@ -1,7 +1,7 @@
 """Redis cache implementation."""
 
 import json
-from typing import Optional, Any, TypeVar, Generic
+from typing import Optional, Any, TypeVar, Generic, cast, Sequence
 
 import redis
 from pydantic import BaseModel
@@ -23,7 +23,8 @@ class RedisCache(Generic[T]):
             db: Redis database number.
             ttl: Time to live for cache entries in seconds.
         """
-        self.client: redis.Redis[bytes] = redis.Redis(
+        # redis.Redis is not subscriptable for typing in this environment
+        self.client: redis.Redis = redis.Redis(
             host=host, port=port, db=db, decode_responses=False
         )
         self.ttl: int = ttl
@@ -38,13 +39,15 @@ class RedisCache(Generic[T]):
         Returns:
             Cached value or None if not found.
         """
-        value: Optional[bytes] = self.client.get(key)
+        # redis client returns a value of uncertain type to the type checker;
+        # cast it to Optional[bytes] for our use
+        value: Optional[bytes] = cast(Optional[bytes], self.client.get(key))
         if value is None:
             return None
 
         try:
             data: dict[str, Any] = json.loads(value.decode("utf-8"))
-            return model_class.model_validate(data)
+            return cast(T, model_class.model_validate(data))
         except (json.JSONDecodeError, ValueError):
             return None
 
@@ -58,7 +61,7 @@ class RedisCache(Generic[T]):
         Returns:
             List of cached values or None if not found.
         """
-        value: Optional[bytes] = self.client.get(key)
+        value: Optional[bytes] = cast(Optional[bytes], self.client.get(key))
         if value is None:
             return None
 
@@ -84,7 +87,10 @@ class RedisCache(Generic[T]):
         return bool(self.client.setex(key, ttl_value, json_str))
 
     def set_list(
-        self, key: str, values: list[BaseModel] | list[T], ttl: Optional[int] = None
+        self,
+        key: str,
+        values: Sequence[BaseModel] | Sequence[T],
+        ttl: Optional[int] = None,
     ) -> bool:
         """Set list of values in cache.
 
@@ -110,7 +116,8 @@ class RedisCache(Generic[T]):
         Returns:
             Number of keys deleted.
         """
-        return int(self.client.delete(key))
+        # Cast redis return to int for type-checker
+        return int(cast(int, self.client.delete(key)))
 
     def delete_pattern(self, pattern: str) -> int:
         """Delete all keys matching pattern.
@@ -121,10 +128,12 @@ class RedisCache(Generic[T]):
         Returns:
             Number of keys deleted.
         """
-        keys: list[bytes] = list(self.client.keys(pattern))
+        # Cast keys() return to list[bytes] for type-checker
+        keys: list[bytes] = cast(list[bytes], self.client.keys(pattern))
         if not keys:
             return 0
-        return int(self.client.delete(*keys))
+        # Cast delete return to int for type-checker
+        return int(cast(int, self.client.delete(*keys)))
 
     def clear_all(self) -> bool:
         """Clear all cache entries.
@@ -132,7 +141,8 @@ class RedisCache(Generic[T]):
         Returns:
             True if successful.
         """
-        self.client.flushdb()
+        # flushdb returns a truthy value; cast to Any to satisfy type-checker
+        cast(Any, self.client.flushdb())
         return True
 
 

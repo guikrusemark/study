@@ -10,7 +10,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 db: SQLAlchemy = SQLAlchemy()
 
 
-class User(db.Model):  # type: ignore[name-defined]
+class User(db.Model):
     """User model."""
 
     __tablename__ = "users"
@@ -33,7 +33,7 @@ class User(db.Model):  # type: ignore[name-defined]
         return f"<User {self.username}>"
 
 
-class Person(db.Model):  # type: ignore[name-defined]
+class Person(db.Model):
     """Person model."""
 
     __tablename__ = "persons"
