@@ -1,10 +1,10 @@
 """Pytest configuration and fixtures."""
 
-from typing import Generator, Any
+from typing import Generator
 
 import pytest
 from flask import Flask
-from flask.testing import FlaskClient
+from flask.testing import FlaskClient, FlaskCliRunner
 
 from src.app import create_app
 from src.models import db
@@ -40,7 +40,7 @@ def client(app: Flask) -> FlaskClient:
 
 
 @pytest.fixture
-def runner(app: Flask) -> Any:
+def runner(app: Flask) -> FlaskCliRunner:
     """Create test CLI runner.
 
     Args:

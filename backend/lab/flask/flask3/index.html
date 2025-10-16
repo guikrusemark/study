@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Portfolio | Creative Works</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .project-card:hover::before {
+            left: 100%;
+        }
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.7;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 custom-scrollbar">
+    <!-- Animated Background Blobs -->
+    <div class="blob bg-purple-400 w-96 h-96 top-0 -left-48"></div>
+    <div class="blob bg-indigo-400 w-96 h-96 bottom-0 -right-48"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Portfolio.</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-purple-600 transition-colors">Projects</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-purple-600">Projects</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-purple-600">About</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">
+                    Hi, I'm <span class="gradient-text">Alex Designer</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                    Crafting beautiful experiences through thoughtful design
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button class="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+                        View My Work
+                    </button>
+                    <button class="px-8 py-4 border-2 border-purple-600 text-purple-600 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all">
+                        Download CV
+                    </button>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i data-feather="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i data-feather="dribbble" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="w-6 h-6 text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600">A selection of my recent work</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn px-6 py-2 rounded-full bg-purple-600 text-white" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-filter="ui">UI Design</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-filter="branding">Branding</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-filter="web">Web Design</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="ui">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="Project 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Mobile Banking App</h3>
+                                <p class="text-sm">UI/UX Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">UI Design</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Modern and intuitive banking application with seamless user experience.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="branding">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/abstract/640x360/2" alt="Project 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Brand Identity</h3>
+                                <p class="text-sm">Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Branding</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Complete brand identity design for a tech startup.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="web">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/workspace/640x360/3" alt="Project 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
+                                <p class="text-sm">Web Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Web Design</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Responsive e-commerce website with modern design principles.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="ui">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/4" alt="Project 4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Dashboard Design</h3>
+                                <p class="text-sm">UI Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">UI Design</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Analytics dashboard with data visualization components.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="branding">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/gradient/640x360/5" alt="Project 5" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Logo Collection</h3>
+                                <p class="text-sm">Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Branding</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Various logo designs for different industries and purposes.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden hover-lift cursor-pointer" data-category="web">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/office/640x360/6" alt="Project 6" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+                                <p class="text-sm">Web Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Web Design</span>
+                            <div class="flex space-x-2">
+                                <i data-feather="heart" class="w-5 h-5 text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                                <i data-feather="bookmark" class="w-5 h-5 text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Creative portfolio website with smooth animations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+                <p class="text-xl text-gray-600">Passionate about creating meaningful designs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="http://static.photos/people/640x360/42" alt="Profile" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-2xl">
+                        <div class="text-3xl font-bold">5+</div>
+                        <div class="text-sm">Years Experience</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">Crafting Digital Experiences</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm a passionate designer with over 5 years of experience creating beautiful and functional digital products. My approach combines creativity with user-centered design principles to deliver exceptional results.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        I specialize in UI/UX design, branding, and web development, working with clients from startups to established businesses to bring their visions to life.
+                    </p>
+                    
+                    <!-- Skills -->
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-4">Skills & Expertise</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-purple-100 text-purple-600 rounded-full">UI Design</span>
+                            <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full">UX Research</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full">Prototyping</span>
+                            <span class="px-4 py-2 bg-green-100 text-green-600 rounded-full">Branding</span>
+                            <span class="px-4 py-2 bg-yellow-100 text-yellow-600 rounded-full">Figma</span>
+                            <span class="px-4 py-2 bg-red-100 text-red-600 rounded-full">Adobe Creative Suite</span>
+                            <span class="px-4 py-2 bg-pink-100 text-pink-600 rounded-full">Web Design</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full">HTML/CSS</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">50+</div>
+                            <div class="text-sm text-gray-600">Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">30+</div>
+                            <div class="text-sm text-gray-600">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">15+</div>
+                            <div class="text-sm text-gray-600">Awards</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-xl text-gray-600">Have a project in mind? Let's create something amazing</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <form id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="mail" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <p class="text-gray-600">hello@alexdesigner.com</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="phone" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Phone</h3>
+                        <p class="text-gray-600">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="map-pin" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Location</h3>
+                        <p class="text-gray-600">San Francisco, CA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold gradient-text">Portfolio.</div>
+                    <p class="text-gray-400 mt-2">© 2024 Alex Designer. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="dribbble" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="instagram" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-md mx-4 transform scale-0 transition-transform" id="modalContent">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-feather="check-circle" class="w-10 h-10 text-green-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Message Sent!</h3>
+                <p class="text-gray-600 mb-6">Thank you for reaching out. I'll get back to you soon!</p>
+                <button onclick="closeModal()" class="px-6 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Project Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-purple-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                btn.classList.remove('bg-gray-200', 'text-gray-700');
+                btn.classList.add('bg-purple-600', 'text-white');
+                
+                // Filter projects
+                const filter = btn.dataset.filter;
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        anime({
+                            targets: card,
+                            opacity: [0, 1],
+                            translateY: [20, 0],
+                            duration: 600,
+                            delay: anime.stagger(100)
+                        });
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show success modal
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            anime({
+                targets: modalContent,
+                scale: [0, 1],
+                opacity: [0, 1],
+                duration: 300,
+                easing: 'easeOutQuad'
+            });
+            
+            // Reset form
+            e.target.reset();
+        });
+        
+        // Close Modal
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            anime({
+                targets: modalContent,
+                scale: [1, 0],
+                opacity: [1, 0],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            });
+        }
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: entry.target,
+                        opacity: [0, 1],
+                        translateY: [30, 0],
+                        duration: 800,
+                        easing: 'easeOutQuad'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+        
+        // Animate hero text on load
+        window.addEventListener('load', () => {
+            anime.timeline({ easing: 'easeOutExpo' })
+                .add({
+                    targets: '#home h1',
+                    opacity: [0, 1],
+                    translateY: [30, 0],
+                    duration: 1000
+                })
+                .add({
+                    targets: '#home p',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    duration: 800
+                }, '-=500')
+                .add({
+                    targets: '#home button',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    duration: 600,
+                    delay: anime.stagger(100)
+                }, '-=400')
+                .add({
+                    targets: '#home .flex.space-x-6 a',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    duration: 600,
+                    delay: anime.stagger(50)
+                }, '-=300');
+        });
+        
+        // Add hover animation to project cards
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                anime({
+                    targets: card.querySelector('img'),
+                    scale: 1.1,
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                anime({
+                    targets: card.querySelector('img'),
+                    scale: 1,
+                    duration: 400,
+                    easing: 'easeOutQuad'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

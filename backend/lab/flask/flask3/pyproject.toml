@@ -1,0 +1,51 @@
+[project]
+name = "flask3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "email-validator>=2.3.0",
+  "flask>=3.1.2",
+  "flask-sqlalchemy>=3.1.1",
+  "pydantic>=2.11.9",
+  "redis>=6.4.0",
+  "requests>=2.32.5",
+  "sqlalchemy>=2.0.43",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4.2",
+  "pytest-cov>=7.0.0",
+  "pytest-mock>=3.15.1",
+  "ruff>=0.14.0",
+]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+check_untyped_defs = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --maxfail=0 --tb=no"
+xfail_strict = true
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 79
+# Enable fixing on format and import sorts
+fix = true
+
+[tool.ruff.lint]
+# Enable import organization and selected rules; ruff will handle import sorting and unused imports
+extend-select = ["I", "UP", "D"]

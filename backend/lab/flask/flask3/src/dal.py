@@ -1,24 +1,28 @@
+# src/dal.py
+
 """Data Access Layer for database operations."""
 
-from typing import Optional, List, Type, TypeVar, Generic, cast
+from typing import Generic, List, Optional, Type, TypeVar
 
 from sqlalchemy import select
 
-from src.models import db, User, Person
-from src.schemas import (
-    UserCreate,
-    UserUpdate,
-    UserResponse,
-    PersonCreate,
-    PersonUpdate,
-    PersonResponse,
-)
 from src.cache import RedisCache
+from src.models import Person, User, db
+from src.schemas import (
+    PersonCreate,
+    PersonResponse,
+    PersonUpdate,
+    UserCreate,
+    UserResponse,
+    UserUpdate,
+)
 
 ModelType = TypeVar("ModelType", User, Person)
 CreateSchemaType = TypeVar("CreateSchemaType", UserCreate, PersonCreate)
 UpdateSchemaType = TypeVar("UpdateSchemaType", UserUpdate, PersonUpdate)
-ResponseSchemaType = TypeVar("ResponseSchemaType", UserResponse, PersonResponse)
+ResponseSchemaType = TypeVar(
+    "ResponseSchemaType", UserResponse, PersonResponse
+)
 
 
 class BaseDAL(
@@ -146,7 +150,10 @@ class BaseDAL(
         return responses
 
     def update(
-        self, id: int, data: UpdateSchemaType, response_model: Type[ResponseSchemaType]
+        self,
+        id: int,
+        data: UpdateSchemaType,
+        response_model: Type[ResponseSchemaType],
     ) -> Optional[ResponseSchemaType]:
         """Update a record.
 
@@ -229,7 +236,7 @@ class UserDAL(BaseDAL[User, UserCreate, UserUpdate, UserResponse]):
         if obj is None:
             return None
 
-        return cast(UserResponse, UserResponse.model_validate(obj))
+        return UserResponse.model_validate(obj)
 
     def get_by_email(self, email: str) -> Optional[UserResponse]:
         """Get user by email.
@@ -246,7 +253,7 @@ class UserDAL(BaseDAL[User, UserCreate, UserUpdate, UserResponse]):
         if obj is None:
             return None
 
-        return cast(UserResponse, UserResponse.model_validate(obj))
+        return UserResponse.model_validate(obj)
 
 
 class PersonDAL(BaseDAL[Person, PersonCreate, PersonUpdate, PersonResponse]):

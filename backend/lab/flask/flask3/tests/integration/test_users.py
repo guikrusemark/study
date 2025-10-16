@@ -7,7 +7,10 @@ from flask.testing import FlaskClient
 
 def test_create_user(client: FlaskClient) -> None:
     """Test creating a user."""
-    data: Dict[str, str] = {"username": "testuser", "email": "test@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test@example.com",
+    }
 
     response: Any = client.post("/api/users", json=data)
     assert response.status_code == 201
@@ -22,10 +25,16 @@ def test_create_user(client: FlaskClient) -> None:
 
 def test_create_user_duplicate_username(client: FlaskClient) -> None:
     """Test creating a user with duplicate username."""
-    data: Dict[str, str] = {"username": "testuser", "email": "test1@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test1@example.com",
+    }
     client.post("/api/users", json=data)
 
-    data2: Dict[str, str] = {"username": "testuser", "email": "test2@example.com"}
+    data2: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test2@example.com",
+    }
     response: Any = client.post("/api/users", json=data2)
     assert response.status_code == 400
     assert "Username already exists" in response.get_json()["error"]
@@ -33,10 +42,16 @@ def test_create_user_duplicate_username(client: FlaskClient) -> None:
 
 def test_create_user_duplicate_email(client: FlaskClient) -> None:
     """Test creating a user with duplicate email."""
-    data: Dict[str, str] = {"username": "testuser1", "email": "test@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser1",
+        "email": "test@example.com",
+    }
     client.post("/api/users", json=data)
 
-    data2: Dict[str, str] = {"username": "testuser2", "email": "test@example.com"}
+    data2: Dict[str, str] = {
+        "username": "testuser2",
+        "email": "test@example.com",
+    }
     response: Any = client.post("/api/users", json=data2)
     assert response.status_code == 400
     assert "Email already exists" in response.get_json()["error"]
@@ -44,7 +59,10 @@ def test_create_user_duplicate_email(client: FlaskClient) -> None:
 
 def test_get_user(client: FlaskClient) -> None:
     """Test getting a user by ID."""
-    data: Dict[str, str] = {"username": "testuser", "email": "test@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test@example.com",
+    }
     create_response: Any = client.post("/api/users", json=data)
     user_id: int = create_response.get_json()["id"]
 
@@ -81,7 +99,10 @@ def test_get_all_users(client: FlaskClient) -> None:
 
 def test_update_user(client: FlaskClient) -> None:
     """Test updating a user."""
-    data: Dict[str, str] = {"username": "testuser", "email": "test@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test@example.com",
+    }
     create_response: Any = client.post("/api/users", json=data)
     user_id: int = create_response.get_json()["id"]
 
@@ -103,7 +124,10 @@ def test_update_user_not_found(client: FlaskClient) -> None:
 
 def test_delete_user(client: FlaskClient) -> None:
     """Test deleting a user."""
-    data: Dict[str, str] = {"username": "testuser", "email": "test@example.com"}
+    data: Dict[str, str] = {
+        "username": "testuser",
+        "email": "test@example.com",
+    }
     create_response: Any = client.post("/api/users", json=data)
     user_id: int = create_response.get_json()["id"]
 

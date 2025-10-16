@@ -1,12 +1,13 @@
 """Example API usage with requests."""
 
+from typing import Any, Dict, List
+
 import requests
-from typing import Dict, Any, List
 
 BASE_URL: str = "http://localhost:5000"
 
 
-def test_api() -> None:
+def _test_api() -> None:
     """Test all API endpoints."""
 
     print("=" * 60)
@@ -18,6 +19,7 @@ def test_api() -> None:
     response: requests.Response = requests.get(f"{BASE_URL}/health")
     print(f"Status: {response.status_code}")
     print(f"Response: {response.json()}")
+    # assert response.status_code == 200
 
     # Create users
     print("\n2. Creating Users")
@@ -146,7 +148,7 @@ def test_api() -> None:
 
 if __name__ == "__main__":
     try:
-        test_api()
+        _test_api()
     except requests.exceptions.ConnectionError:
         print("Error: Could not connect to API server.")
         print("Make sure the server is running: python run.py")

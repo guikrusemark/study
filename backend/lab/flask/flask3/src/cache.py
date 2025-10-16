@@ -1,7 +1,7 @@
 """Redis cache implementation."""
 
 import json
-from typing import Optional, Any, TypeVar, Generic, cast, Sequence
+from typing import Any, Generic, Optional, Sequence, TypeVar, cast
 
 import redis
 from pydantic import BaseModel
@@ -47,7 +47,7 @@ class RedisCache(Generic[T]):
 
         try:
             data: dict[str, Any] = json.loads(value.decode("utf-8"))
-            return cast(T, model_class.model_validate(data))
+            return model_class.model_validate(data)
         except (json.JSONDecodeError, ValueError):
             return None
 
@@ -71,7 +71,9 @@ class RedisCache(Generic[T]):
         except (json.JSONDecodeError, ValueError):
             return None
 
-    def set(self, key: str, value: BaseModel, ttl: Optional[int] = None) -> bool:
+    def set(
+        self, key: str, value: BaseModel, ttl: Optional[int] = None
+    ) -> bool:
         """Set value in cache.
 
         Args:
@@ -103,7 +105,9 @@ class RedisCache(Generic[T]):
             True if successful, False otherwise.
         """
         ttl_value: int = ttl if ttl is not None else self.ttl
-        data: list[dict[str, Any]] = [item.model_dump(mode="json") for item in values]
+        data: list[dict[str, Any]] = [
+            item.model_dump(mode="json") for item in values
+        ]
         json_str: str = json.dumps(data)
         return bool(self.client.setex(key, ttl_value, json_str))
 
@@ -129,7 +133,7 @@ class RedisCache(Generic[T]):
             Number of keys deleted.
         """
         # Cast keys() return to list[bytes] for type-checker
-        keys: list[bytes] = cast(list[bytes], self.client.keys(pattern))
+        keys: list[bytes] = cast(list[bytes], self.client.keys(pattern))  # pyright: ignore[reportUnknownMemberType]
         if not keys:
             return 0
         # Cast delete return to int for type-checker
@@ -142,7 +146,7 @@ class RedisCache(Generic[T]):
             True if successful.
         """
         # flushdb returns a truthy value; cast to Any to satisfy type-checker
-        cast(Any, self.client.flushdb())
+        cast(Any, self.client.flushdb())  # pyright: ignore[reportUnknownMemberType]
         return True
 
 

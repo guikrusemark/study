@@ -1,41 +1,62 @@
-# pyright: reportUnusedFunction=false
+# src/routes.py
 
 """API routes."""
 
-from typing import Any, List
+# pyright: reportUnusedFunction=false
 
-from flask import Blueprint, request, jsonify, Response
+from typing import Any
+
+from flask import Blueprint, Response, jsonify, request
 from pydantic import ValidationError
 
-from src.dal import UserDAL, PersonDAL
+from src.dal import PersonDAL, UserDAL
 from src.schemas import (
-    UserCreate,
-    UserUpdate,
-    UserResponse,
     PersonCreate,
-    PersonUpdate,
     PersonResponse,
+    PersonUpdate,
+    UserCreate,
+    UserResponse,
+    UserUpdate,
 )
 
 
-def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
+def init_routes(
+    app: Any,
+    user_dal: UserDAL,
+    person_dal: PersonDAL,
+    animal_dal: Any,
+) -> None:
     """Initialize routes with DAL instances.
 
     Args:
         app: Flask application instance.
         user_dal: User Data Access Layer.
         person_dal: Person Data Access Layer.
+        animal_dal: Animal Data Access Layer.
+
     """
-
     # Create blueprints inside function to avoid reregistration issues
-    users_bp: Blueprint = Blueprint("users", __name__, url_prefix="/api/users")
-    persons_bp: Blueprint = Blueprint("persons", __name__, url_prefix="/api/persons")
+    users_bp: Blueprint = Blueprint(
+        "users",
+        __name__,
+        url_prefix="/api/users",
+    )
+    persons_bp: Blueprint = Blueprint(
+        "persons",
+        __name__,
+        url_prefix="/api/persons",
+    )
+    animal_bp: Blueprint = Blueprint(
+        "animals",
+        __name__,
+        url_prefix="/api/animals",
+    )
 
-    # User routes
+    # User routes ----------------------------------------------------------
     @users_bp.route("", methods=["GET"])
     def get_users() -> tuple[Response, int]:
         """Get all users."""
-        users: List[UserResponse] = user_dal.get_all(UserResponse)
+        users: list[UserResponse] = user_dal.get_all(UserResponse)
         return jsonify([user.model_dump(mode="json") for user in users]), 200
 
     @users_bp.route("/<int:user_id>", methods=["GET"])
@@ -62,7 +83,9 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
             user: UserResponse = user_dal.create(user_create, UserResponse)
             return jsonify(user.model_dump(mode="json")), 201
         except ValidationError as e:
-            return jsonify({"error": "Validation error", "details": e.errors()}), 400
+            return jsonify(
+                {"error": "Validation error", "details": e.errors()}
+            ), 400
 
     @users_bp.route("/<int:user_id>", methods=["PUT"])
     def update_user(user_id: int) -> tuple[Response, int]:
@@ -91,7 +114,9 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
                 return jsonify({"error": "User not found"}), 404
             return jsonify(user.model_dump(mode="json")), 200
         except ValidationError as e:
-            return jsonify({"error": "Validation error", "details": e.errors()}), 400
+            return jsonify(
+                {"error": "Validation error", "details": e.errors()}
+            ), 400
 
     @users_bp.route("/<int:user_id>", methods=["DELETE"])
     def delete_user(user_id: int) -> tuple[Response, int]:
@@ -100,7 +125,7 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
             return jsonify({"message": "User deleted successfully"}), 200
         return jsonify({"error": "User not found"}), 404
 
-    # Person routes
+    # Person routes ----------------------------------------------------------
     @persons_bp.route("", methods=["GET"])
     def get_persons() -> tuple[Response, int]:
         """Get all persons or search by name."""
@@ -108,18 +133,22 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
         last_name: str | None = request.args.get("last_name")
 
         if first_name or last_name:
-            persons: List[PersonResponse] = person_dal.search_by_name(
+            persons: list[PersonResponse] = person_dal.search_by_name(
                 first_name, last_name
             )
         else:
             persons = person_dal.get_all(PersonResponse)
 
-        return jsonify([person.model_dump(mode="json") for person in persons]), 200
+        return jsonify(
+            [person.model_dump(mode="json") for person in persons]
+        ), 200
 
     @persons_bp.route("/<int:person_id>", methods=["GET"])
     def get_person(person_id: int) -> tuple[Response, int]:
         """Get person by ID."""
-        person: PersonResponse | None = person_dal.get_by_id(person_id, PersonResponse)
+        person: PersonResponse | None = person_dal.get_by_id(
+            person_id, PersonResponse
+        )
         if person is None:
             return jsonify({"error": "Person not found"}), 404
         return jsonify(person.model_dump(mode="json")), 200
@@ -130,10 +159,14 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
         try:
             data: dict[str, Any] = request.get_json() or {}
             person_create: PersonCreate = PersonCreate.model_validate(data)
-            person: PersonResponse = person_dal.create(person_create, PersonResponse)
+            person: PersonResponse = person_dal.create(
+                person_create, PersonResponse
+            )
             return jsonify(person.model_dump(mode="json")), 201
         except ValidationError as e:
-            return jsonify({"error": "Validation error", "details": e.errors()}), 400
+            return jsonify(
+                {"error": "Validation error", "details": e.errors()}
+            ), 400
 
     @persons_bp.route("/<int:person_id>", methods=["PUT"])
     def update_person(person_id: int) -> tuple[Response, int]:
@@ -148,7 +181,9 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
                 return jsonify({"error": "Person not found"}), 404
             return jsonify(person.model_dump(mode="json")), 200
         except ValidationError as e:
-            return jsonify({"error": "Validation error", "details": e.errors()}), 400
+            return jsonify(
+                {"error": "Validation error", "details": e.errors()}
+            ), 400
 
     @persons_bp.route("/<int:person_id>", methods=["DELETE"])
     def delete_person(person_id: int) -> tuple[Response, int]:
@@ -157,6 +192,44 @@ def init_routes(app: Any, user_dal: UserDAL, person_dal: PersonDAL) -> None:
             return jsonify({"message": "Person deleted successfully"}), 200
         return jsonify({"error": "Person not found"}), 404
 
+    # Animal routes ----------------------------------------------------------
+    @animal_bp.route("", methods=["POST"])
+    def create_animal() -> tuple[Response, int]:
+        """Create a new animal."""
+        try:
+            data: dict[str, Any] = request.get_json() or {}
+            animal = animal_dal.create(data)
+
+            res = jsonify(animal)
+            res.headers["Location"] = f"/api/animals/{animal['id']}"
+
+            return res, 201
+        except ValidationError as e:
+            return jsonify(
+                {
+                    "error": "Validation error",
+                    "details": e.errors(),
+                }
+            ), 400
+
+    @animal_bp.route("/<int:animal_id>", methods=["GET"])
+    def get_animal(animal_id: int) -> tuple[Response, int]:
+        """Get animal by ID."""
+        animal = animal_dal.get_by_id(animal_id)
+
+        if animal is None:
+            return jsonify({"error": "Animal not found"}), 404
+
+        return jsonify(animal), 200
+
+    @animal_bp.route("/<int:animal_id>", methods=["DELETE"])
+    def delete_animal(animal_id: int) -> tuple[Response, int]:
+        """Delete an animal."""
+        if animal_dal.delete(animal_id):
+            return jsonify({"message": "Animal deleted successfully"}), 200
+        return jsonify({"error": "Animal not found"}), 404
+
     # Register blueprints
     app.register_blueprint(users_bp)
     app.register_blueprint(persons_bp)
+    app.register_blueprint(animal_bp)
