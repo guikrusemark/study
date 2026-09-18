@@ -7,7 +7,7 @@ That's my study repository! This repo contains various projects and exercises th
 ### Backend
 - **Python Fundamentals**: Various exercises and projects to learn Python.
 - **Testing**: Automation scripts, cryptography projects, data science projects, and more.
-- **Web Development**: Projects using Django, FastAPI, Flask, and web scraping.
+- **Web Development**: Projects using Fastify, FastAPI, Flask, and web scraping.
 
 ### Frontend
 - **CSS Fundamentals**: Projects to learn Flexbox, Grid, Sass, Tailwind, and more.
